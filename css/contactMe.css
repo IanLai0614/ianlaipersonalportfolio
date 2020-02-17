@@ -313,10 +313,10 @@ main {
 /* ////////////////////////////////////////////////////////////////main-left end//////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////main-left end//////////////////////////////////////////////////////////// */
 .main-mid {
-   
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-around;
     margin: auto;
     width: calc(500vw / 7);
     height: 100vh;
@@ -324,7 +324,9 @@ main {
     }
 
 .main-mid h1{
-    margin-top: 75px;
+    position: absolute;
+    top: 75px;
+    /* margin-top: 75px; */
     width: 100%;
     text-align: center;
     font-size: 100px;
@@ -350,6 +352,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
 }
 .contact-contentArea{
     /* background-color: royalblue; */

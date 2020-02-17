@@ -574,7 +574,7 @@ height: 40%;
     }
 }
 .logo-explainArea .logo-explain:nth-child(2) .explain-img{
-    /* background-color: red; */
+    background-color: red;
     position: absolute;
     top: 0px;
     align-self: center;
@@ -583,7 +583,17 @@ height: 40%;
     height: 130px;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url("../images/AboutMe/Intro-geneHover.svg");
+    /* background-image: url("../images/AboutMe/Intro-geneHover.svg"); */
+}
+.logo-explainArea .logo-explain:nth-child(2) .explain-img span:first-child{
+    position: absolute;
+    top: -20px;
+    align-self: center;
+    margin: auto;
+    width: 50px;
+    height:70px;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 .logo-explain:nth-child(2) p{
     margin-top: 190px;
