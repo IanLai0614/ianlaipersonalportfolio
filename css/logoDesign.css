@@ -370,6 +370,10 @@ main {
     padding: 0px 30px;
     width: 40%;
     height: 100%;
+    /* background-color: #16E9D8; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
    
 }
 
@@ -388,21 +392,21 @@ main {
     margin-bottom: 15px;
     /* background-color: royalblue; */
 }
-.w-infor .gongsang{
+.w-infor .gongsang_2{
     align-self: center;
     width: 100px;
-    height: 100px;
+    height: 130px;
     background-image: url("../images/logoDesign/Gongsang-logo2.png");
 }
-.w-infor .hair{
+.w-infor .hair_2{
     align-self: center;
     width: 200px;
-    height: 150px;
+    height: 100px;
     background-image: url("../images/logoDesign/hair-logo.png");
 }
-.w-infor .freashman{
-    width: 200px;
-    height: 150px;
+.w-infor .freashman_2{
+    width: 250px;
+    height: 160px;
     background-image: url("../images/logoDesign/freashman-logo.png");
 }
 .w-text{
