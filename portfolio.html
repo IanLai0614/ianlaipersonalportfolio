@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="animate.css-master//animate.min.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+</head>
+
+<body>
+
+    <header>
+        <menu>
+            <div class="menu-content">
+                <div class="menu-contentArea">
+                    <div class="menu-theme"><span></span><a href="index.html">HOME</a></div>
+                    <div class="menu-theme"><span></span><a href="aboutMe.html">ABOUT ME</a></div>
+                    <div class="menu-theme"><span></span><a href="portfolio.html">PORTFOLIO</a></div>
+                    <div class="menu-theme"><span></span><a href="contactMe.html">CONTACT ME</a></div>
+                </div>
+            </div>
+            <div class="menu-btn close">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+            </div>
+
+        </menu>
+        <div id="home"><a href="index.html"></a></div>
+        <div id="contact">
+            <p>LINK</p>
+
+            <a class="fb-link" href="https://www.facebook.com/dormpot" target="_blank"></a>
+            <a class="issuu-link" href="https://issuu.com/laikuangying/docs/___2018" target="_blank"></a>
+            <a class="ig-link" href="https://www.instagram.com/laikuangying/" target="_blank"></a>
+
+        </div>
+    </header>
+    <main>
+        <div class="main-left">
+            <div class="main-text">DESIGN</div>
+            <div class="main-decoration"><img src="images/index/index-left-deraction.svg" alt=""></div>
+        </div>
+
+        <div class="main-mid">
+            <h1>#PORTFOLIO</h1>
+            <div class="sub_header">
+                    <ul class="sub_nav">
+                        <li class="btn1"> ALL</li>
+                        <li class="btn2"> INDUSTRIAL</li>
+                        <li class="btn3"> GRAPHIC</li>
+                    </ul>
+            </div>
+
+            <div class="work-area">
+                <div id="graphic" class="works-category" >
+                    <div class="w-text">
+                        <div class="w-title">Logo-design</div>
+                        <div  class="w-category">#Graphic</div>
+                    </div>
+                    <div class="w-img"><div class="w-image"> <a href="LogoDesign.html"> LOGODESIGN</a> </div></div>
+                    <div class="w-intro"></div>
+                </div>
+                <div id="industrial" class="works-category" >
+                    <div class="w-text">
+                        <div class="w-title">TreaTa</div>
+                        <div  class="w-category">#Industrial</div>
+                    </div>
+                    <div class="w-img"><div class="w-image"> <a href="LogoDesign.html"> TREATA</a> </div></div>
+                    <div class="w-intro"></div>
+                </div>
+                <div id="graphic" class="works-category" >
+                    <div class="w-text">
+                        <div class="w-title">Dress-design</div>
+                        <div  class="w-category">#Graphic</div>
+                    </div>
+                    <div class="w-img"><div class="w-image"> <a href="LogoDesign.html"> DRESSDESIGN</a> </div></div>
+                    <div class="w-intro"></div>
+                </div>
+                <div id="industrial" class="works-category" >
+                    <div class="w-text">
+                        <div class="w-title">Oknife&Broad</div>
+                        <div  class="w-category">#Industrial</div>
+                    </div>
+                    <div class="w-img"><div class="w-image"> <a href="LogoDesign.html"> OKNIFE&BROAD</a> </div></div>
+                    <div class="w-intro"></div>
+                </div>
+                <div id="graphic" class="works-category"  >
+                    <div class="w-text">
+                        <div class="w-title">Poster-design</div>
+                        <div class="w-category">#Graphic</div>
+                    </div>
+                    <div class="w-img"><div class="w-image"> <a href="LogoDesign.html"> POSTERDESIGN</a> </div></div>
+                    <div class="w-intro"></div>
+                </div>
+                <div id="industrial" class="works-category" >
+                    <div class="w-text">
+                        <div class="w-title">Strucscrew</div>
+                        <div  class="w-category">#Industrial</div>
+                    </div>
+                    <div class="w-img"><div class="w-image"> <a href="LogoDesign.html"> STRUCSCREW</a> </div></div>
+                    <div class="w-intro"></div>
+                </div>
+                <div id="graphic" class="works-category" >
+                    <div class="w-text">
+                        <div class="w-title">Book-design</div>
+                        <div  class="w-category">#Graphic</div>
+                    </div>
+                    <div class="w-img"><div class="w-image"> <a href="LogoDesign.html"> BOOKDESIGN</a> </div></div>
+                    <div class="w-intro"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="main-right">
+            <div class="main-decoration"><img src="images/index/index-right-deraction.svg" alt=""></div>
+            <div class="main-text">PORTFOLIO</div>
+            <div class="block"></div>
+
+        </div>
+    </main>
+
+
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+        'use strict'
+
+        $(".sub_nav .btn1").click(
+            function(){
+                $(".work-area #industrial").show()
+                $(".work-area #graphic").show()
+            }
+        )
+        $(".sub_nav .btn2").click(
+            function(){
+                $(".work-area #industrial").show()
+                $(".work-area #graphic").hide()
+
+            }
+        )
+        $(".sub_nav .btn3").click(
+            function(){
+                $(".work-area #industrial").hide()
+                $(".work-area #graphic").show()
+
+            }
+        )
+
+        $(".sub_nav li").click(
+            function(){
+                $(".sub_nav li").removeClass("light")
+                $(".sub_nav li").css({"color":"rgb(220, 220, 220)"})
+            if($(this).hasClass("light")){
+                $(this).removeClass("light")
+                $(this).css({"color":"rgb(220, 220, 220)"})
+            }else{
+                $(this).addClass("light")
+                $(this).css({"color":"#16E9D8"})
+            }}
+        )
+          
+    
+
+        $(function () {
+            $(".menu-btn").on("click", function () {
+
+                $(this).toggleClass("switch");
+
+            });
+        });
+
+
+        /////////menu-btn event////////////////////////////
+
+        $(".menu-btn").click(
+            function () {
+                console.log("aaa")
+                if ($(".menu-content").hasClass("show")) {
+                    $(".menu-content").removeClass("show")
+                    $(".main-right>.block").hide()
+                    $(".main-right>.main-text").css({ "bottom": "10%", "color": "#3E3A39" })
+                }
+                else {
+                    $(".menu-content").addClass("show")
+                    $(".main-right>.main-text").text("MENU")
+                    $(".main-right>.block").show()
+                    $(".main-right>.main-text").css({ "bottom": "35%", "color": "#DCDCDC" })
+                }
+            }
+        )
+    </script>
+</body>
+
+</html>

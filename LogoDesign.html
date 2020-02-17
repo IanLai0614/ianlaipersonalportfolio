@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo-design</title>
+    <link rel="stylesheet" href="animate.css-master//animate.min.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="css/logoDesign.css">
+</head>
+
+<body>
+
+    <header>
+        <menu>
+            <div class="menu-content">
+                <div class="menu-contentArea">
+                    <div class="menu-theme"><span></span><a href="index.html">HOME</a></div>
+                    <div class="menu-theme"><span></span><a href="aboutMe.html">ABOUT ME</a></div>
+                    <div class="menu-theme"><span></span><a href="portfolio.html">PORTFOLIO</a></div>
+                    <div class="menu-theme"><span></span><a href="contactMe.html">CONTACT ME</a></div>
+                </div>
+            </div>
+            <div class="menu-btn close">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+            </div>
+
+        </menu>
+        <div id="home"><a href="index.html"></a></div>
+        <div id="contact">
+            <p>LINK</p>
+
+            <a class="fb-link" href="https://www.facebook.com/dormpot" target="_blank"></a>
+            <a class="issuu-link" href="https://issuu.com/laikuangying/docs/___2018" target="_blank"></a>
+            <a class="ig-link" href="https://www.instagram.com/laikuangying/" target="_blank"></a>
+
+        </div>
+    </header>
+    <main>
+        <div class="main-left">
+            <div class="main-text">GRAPHIC</div>
+        </div>
+
+        <div class="main-mid">
+            <h1>#LOGO-DESIGN</h1>
+
+            <div class="work-area">
+                <div class="works-item">
+
+                    <div class="w-content ">
+                        <div class="w-majorImage gongsang"></div>
+                        <div class="w-infor">
+                            <div class="w-inforBox">
+                            <div class="w-Image gongsang"></div>
+                            <span></span>
+                            <div class="w-text">
+                                <h2>Concept</h2>
+                                <p>This logo was designed for a clothes brand. I combined
+                                    some fashion element of Korea into the words" 說夢"which means
+                                    to tell other their dreams in chinese. </p>
+                            </div>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="w-content ">
+
+
+                        <div class="w-infor">
+                            <div class="w-inforBox">
+                                <div class="w-Image hair"></div>
+                                <span></span>
+                                <div class="w-text">
+                                    <h2>Concept</h2>
+                                    <p>This logo was designed for a magazine about tradition barber shop in
+                                        Taiwan. As the result, I made the logo looked gentle, and added the comb
+                                        and scissors in it to f it the main issu e of the ma gazine. </p>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-majorImage hair"></div>
+                    </div>
+                    <div class="w-content ">
+                        <div class="w-majorImage freashman"></div>
+
+                        <div class="w-infor">
+                            <div class="w-inforBox"></div>
+                            <div class="w-Image freashman"></div>
+                            <span></span>
+                            <div class="w-text">
+                                <h2>Concept</h2>
+                                <p>The logo was redesigned for the NCKU freshman
+                                    camp in 2016, and the core idea of that year was
+                                    "Fairy tale". So I created the logo with smooth
+                                    and round strokes to make it looked lively and
+                                    lovely. In addition, I hided three objects that
+                                    usually appear in the fairy tale in the logo.They
+                                    were crown, fair y, and unicorn, r espectively. </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="main-right">
+                <div class="main-text">DESIGN</div>
+                <div class="block"></div>
+
+            </div>
+    </main>
+
+    <div class="top-btn">
+        <span class="top-bar1"></span>
+        <span class="top-bar2"></span>
+        <p>Top</p>
+        <span class="top-bar3"></span>
+        <span class="top-bar4"></span>
+    </div>
+
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+        'use strict'
+
+
+
+
+
+
+        $(function () {
+            $(".menu-btn").on("click", function () {
+
+                $(this).toggleClass("switch");
+
+            });
+        });
+
+
+        /////////menu-btn event////////////////////////////
+
+        $(".menu-btn").click(
+            function () {
+                console.log("aaa")
+                if ($(".menu-content").hasClass("show")) {
+                    $(".main-right>.main-text").text("DESIGN")
+                    $(".menu-content").removeClass("show")
+                    $(".main-right>.block").hide()
+                    $(".main-right>.main-text").css({ "bottom": "10%" })
+                }
+                else {
+                    $(".menu-content").addClass("show")
+                    $(".main-right>.main-text").text("MENU")
+                    $(".main-right>.block").show()
+                    $(".main-right>.main-text").css({ "bottom": "35%" })
+                }
+            }
+        )
+
+        $(window).scroll(function () {
+            // console.log("test")
+
+            console.log($(window).scrollTop())  //縱向滾輪位置
+            if ($(window).scrollTop() >= 500) {
+                $(".top-btn").show()
+            }
+            else {
+                $(".top-btn").hide()
+            }
+        })
+
+        $(".top-btn").click(
+            function () {
+                console.log("test")
+                $("html, body").animate({ scrollTop: 0 });
+            }
+        );
+    </script>
+</body>
+
+</html>

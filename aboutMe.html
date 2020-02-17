@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="animate.css-master//animate.min.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="css/aboutMe.css">
+</head>
+<header>
+    <menu>
+        <div class="menu-content">
+            <div class="menu-contentArea">
+                <div class="menu-theme"><span></span><a href="index.html">HOME</a></div>
+                <div class="menu-theme"><span></span><a href="aboutMe.html">ABOUT ME</a></div>
+                <div class="menu-theme"><span></span><a href="portfolio.html">PORTFOLIO</a></div>
+                <div class="menu-theme"><span></span><a href="contactMe.html">CONTACT ME</a></div>
+            </div>
+        </div>
+        <div class="menu-btn close">
+            <span class="bar bar1"></span>
+            <span class="bar bar2"></span>
+            <span class="bar bar3"></span>
+        </div>
+
+    </menu>
+    <div id="home"><a href="index.html"></a></div>
+    <div id="contact">
+        <p>LINK</p>
+
+        <a class="fb-link" href="https://www.facebook.com/dormpot" target="_blank"></a>
+        <a class="issuu-link" href="https://issuu.com/laikuangying/docs/___2018" target="_blank"></a>
+        <a class="ig-link" href="https://www.instagram.com/laikuangying/" target="_blank"></a>
+
+    </div>
+</header>
+
+<main>
+    <div class="main-left">
+        <div class="main-text">RATIONAL</div>
+        <div class="main-decoration"><img src="images/index/index-left-deraction.svg" alt=""></div>
+    </div>
+
+    <div class="main-mid">
+        <h1>#ABOUT ME</h1>
+        <div class="myPicture">
+            <div class="myPicture-BG">
+                <div class="myPicture-text">
+                    <p>See the word in<span></span></p>
+                    <p>"Different" way!<span></span></p>
+                </div>
+            </div>
+        </div>
+        <div class="myIntro animated fadeInRight ">
+            <div class="intro-title">INTRO <span></span></div>
+            <p>Hellow! My name is "Ian Lai", my chinese name is "賴廣穎". Wellcome to my personal website. Hope you enjoy
+                it! </p>
+        </div>
+
+    </div>
+
+    <div class="main-right">
+        <div class="main-decoration"><img src="images/index/index-right-deraction.svg" alt=""></div>
+        <div class="main-text">SENSIBLE</div>
+        <div class="block"></div>
+
+    </div>
+</main>
+<div id="logo-intro">
+    <div class="logo"><div class="logo-Img"></div></div>
+    <div class="logo-explainArea">
+        <div class="logo-explain">
+            <div class="explain-img"></div>
+            <p>See the world in different ways.</p>
+        </div>
+        <div class="logo-explain">
+            <div class="explain-img">
+                <span></span>
+                <span></span>
+            </div>
+            <p>Just like genes. <br>
+            Keep changing for designing.</p>
+        </div>
+        <div class="logo-explain">
+            <div class="explain-img"></div>
+            <p>Be rational and sensible<br>at the same time.</p>
+        </div>
+    </div>
+</div>
+
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+    'use strict'
+
+    $(function () {
+        $(".menu-btn").on("click", function () {
+
+            $(this).toggleClass("switch");
+
+        });
+    });
+
+    /////////menu-btn event////////////////////////////
+
+    $(".menu-btn").click(
+        function () {
+            console.log("aaa")
+            if ($(".menu-content").hasClass("show")) {
+                $(".menu-content").removeClass("show")
+                $(".main-right>.block").hide()
+                    $(".main-right>.main-text").css({ "bottom": "10%", "color": "#3E3A39" })
+            }
+            else {
+                $(".menu-content").addClass("show")
+                $(".main-right>.main-text").text("MENU")
+                    $(".main-right>.block").show()
+                    $(".main-right>.main-text").css({ "bottom": "35%", "color": "#DCDCDC" })
+            }
+        }
+    )
+
+    /////////menu-content event////////////////////////////
+
+    let img = $(".myPicture-BG");
+    console.log(img[0]);
+    let boundingBox = img[0].getBoundingClientRect()
+    console.log(boundingBox)
+
+    let centerx = boundingBox.left + boundingBox.width / 10;
+    let centery = boundingBox.top + boundingBox.height / 10;
+    $(".myPicture").hover(
+        function () {
+            $(".main-left>.main-decoration>img").css({ "bottom": "-100px", "transform": "scaleY(1.5)" })
+            $(".main-right>.main-decoration>img").css({ "top": "-90px", "transform": "scaleY(1.5)" })
+            $(".main-text").css({ "color": "#DCDCDC" })
+            $(".myPicture").mousemove(
+                function (e) {
+                    // console.log("test")
+                    // console.log(e)
+                    let { pageX, pageY } = e;
+                    console.log({ pageX, pageY });
+
+                    let [distenceX, distenceY] = [centerx - pageX, centery - pageY];
+                    console.log([distenceX, distenceY]);
+
+                    $(".myPicture-BG").css({
+                        "transform": `rotateX(${distenceX / 20}deg) rotateY(${distenceY / 20}deg) `
+                    })
+                }
+            )
+
+        }, function () {
+            $(".main-left>.main-decoration>img").css({ "bottom": "-150px", "transform": "scaleY(1)" })
+            $(".main-right>.main-decoration>img").css({ "top": "-150px", "transform": "scaleY(1)" })
+            $(".main-text").css({ "color": "#3E3A39" })
+            $(".myPicture").mousemove(
+
+                $(".myPicture-BG").css({
+                    "transform": "rotate(0deg)"
+                })
+            )
+        })
+
+
+
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

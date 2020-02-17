@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contactMe</title>
+    <link rel="stylesheet" href="animate.css-master//animate.min.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="css/contactMe.css">
+</head>
+
+<body>
+
+    <header>
+        <menu>
+            <div class="menu-content">
+                <div class="menu-contentArea">
+                    <div class="menu-theme"><span></span><a href="index.html">HOME</a></div>
+                    <div class="menu-theme"><span></span><a href="aboutMe.html">ABOUT ME</a></div>
+                    <div class="menu-theme"><span></span><a href="portfolio.html">PORTFOLIO</a></div>
+                    <div class="menu-theme"><span></span><a href="contactMe.html">CONTACT ME</a></div>
+                </div>
+            </div>
+            <div class="menu-btn close">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+            </div>
+
+        </menu>
+        <div id="home"><a href="index.html"></a></div>
+        <div id="contact">
+            <p>LINK</p>
+
+            <a class="fb-link" href="https://www.facebook.com/dormpot" target="_blank"></a>
+            <a class="issuu-link" href="https://issuu.com/laikuangying/docs/___2018" target="_blank"></a>
+            <a class="ig-link" href="https://www.instagram.com/laikuangying/" target="_blank"></a>
+
+        </div>
+    </header>
+    <main>
+        <div class="main-left">
+            <div class="main-text">CONTACT ME</div>
+            <div class="main-decoration"><img src="images/index/index-left-deraction.svg" alt=""></div>
+        </div>
+
+        <div class="main-mid">
+            <h1>#CONTACT ME</h1>
+            <div class="contact-content">
+                <div class="contact-contentArea">
+                    <div class="contact-logo"></div>
+                    <div class="contact-title">
+                        <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 375.7 89.6"
+                            style="enable-background:new 0 0 375.7 89.6;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0 {
+                                    fill: none;
+                                    stroke: #DBDCDC;
+                                    stroke-linecap: round;
+                                    stroke-linejoin: round;
+                                    stroke-miterlimit: 10;
+                                }
+                            </style>
+                            <g id="name-path">
+                                <polygon class="st0" points="18.3,0.5 0.5,89.1 16.9,89.1 34.7,0.5 	" />
+                                <polygon class="st0" points="75.6,0.5 27.4,89.1 44.9,89.1 77.7,25.4 82,59.5 69.8,59.5 63.1,72.9 83.2,72.9 85.1,89.1 101.8,89.1 
+                   88.7,0.5 	" />
+                                <polygon class="st0"
+                                    points="304.5,0.5 256.2,89.1 273.8,89.1 306.6,25.4 310.8,59.5 298.7,59.5 292,72.9 312.1,72.9 314,89.1 330.6,89.1 317.6,0.5 	" />
+                                <polygon class="st0" points="166.9,56 143.8,0.5 129.9,0.5 112.1,89.1 128.5,89.1 139.7,33.7 162.7,89.1 176.6,89.1 194.4,0.5 
+                   178,0.5 	" />
+                                <polygon class="st0"
+                                    points="230.5,0.5 214.1,0.5 196.3,89.1 251.4,89.1 254.3,74.6 215.7,74.6 	" />
+                                <polygon class="st0" points="358.7,0.5 341,89.1 357.4,89.1 375.2,0.5 	" />
+                            </g>
+                        </svg>
+
+                    </div>
+                    <div class="contact-text">
+                        <p>Name：賴廣穎</p>
+                        <p>Tel：0937-163-073</p>
+                        <p>E-mail：axxxyyzz123@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="main-right">
+            <div class="main-decoration"><img src="images/index/index-right-deraction.svg" alt=""></div>
+            <div class="main-text">CONTACT ME</div>
+            <div class="block"></div>
+
+        </div>
+    </main>
+
+
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+        'use strict'
+
+        $(".contact-title").hover(
+            function () {
+                $(".main-text").css({ "color": "#DCDCDC" })
+                $("#name-path .st0").css({ "animation": "name-animate2 1s ease-in-out forwards" })
+                
+                // $(".main-name img").css({"animation":"name-animate3 1s ease-out forwards"})
+
+            }, function () {
+                $(".main-text").css({ "color": "#3E3A39" })
+                $("#name-path .st0").css({ "animation": "none" })
+            }
+        )
+
+
+
+        $(function () {
+            $(".menu-btn").on("click", function () {
+
+                $(this).toggleClass("switch");
+
+            });
+        });
+
+        /////////menu-btn event////////////////////////////
+
+        $(".menu-btn").click(
+            function () {
+                console.log("aaa")
+                if ($(".menu-content").hasClass("show")) {
+                    $(".menu-content").removeClass("show")
+                    $(".main-right>.block").hide()
+                    $(".main-right>.main-text").css({ "bottom": "10%", "color": "#3E3A39" })
+                }
+                else {
+                    $(".menu-content").addClass("show")
+                    $(".main-right>.main-text").text("MENU")
+                    $(".main-right>.block").show()
+                    $(".main-right>.main-text").css({ "bottom": "35%", "color": "#DCDCDC" })
+                }
+            }
+        )
+    </script>
+</body>
+
+</html>
