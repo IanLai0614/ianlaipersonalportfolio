@@ -574,26 +574,112 @@ height: 40%;
     }
 }
 .logo-explainArea .logo-explain:nth-child(2) .explain-img{
-    background-color: red;
+    /* background-color: red; */
     position: absolute;
     top: 0px;
     align-self: center;
     margin: auto;
     width: 50px;
-    height: 130px;
+    height: 150px;
     background-repeat: no-repeat;
     background-size: contain;
     /* background-image: url("../images/AboutMe/Intro-geneHover.svg"); */
 }
 .logo-explainArea .logo-explain:nth-child(2) .explain-img span:first-child{
     position: absolute;
-    top: -20px;
+    top: 0px;
     align-self: center;
     margin: auto;
     width: 50px;
-    height:70px;
+    height: 65px;
     background-repeat: no-repeat;
     background-size: contain;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform: scale(1);
+    background-image: url("../images/AboutMe/Intro-genetop.svg");
+    animation: genetop 6s ease-in infinite;
+    
+}
+@keyframes genetop{
+    0%{
+        top:0px;
+        /* background-image: url("../images/AboutMe/Intro-genetop.svg"); */
+        transform: scale(1);
+    }
+
+    40%{
+        top:13px;
+        background-image: url("../images/AboutMe/Intro-genetop.svg");
+        transform: scale(1);
+        
+    }
+    45%{
+        top:13px;
+        background-image: url("../images/AboutMe/Intro-geneDown.svg");
+        transform: scale(1);
+    }
+    55%{
+        top:13px;
+        background-image: url("../images/AboutMe/Intro-geneDown.svg");
+        transform: scale(1);
+    }
+    60%{
+        top:13px;
+        background-image: url("../images/AboutMe/Intro-genetop.svg");
+        transform: scale(1);
+    }
+    100%{
+        top:0px;
+        background-image: url("../images/AboutMe/Intro-genetop.svg");
+        
+    }
+}
+
+.logo-explainArea .logo-explain:nth-child(2) .explain-img span:last-child{
+    position: absolute;
+    bottom:  0px;
+    align-self: center;
+    margin: auto;
+    width: 50px;
+    height: 65px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    background-image: url("../images/AboutMe/Intro-genetop.svg");
+    animation: genedown 6s ease-in infinite;
+    /* background-color: aquamarine; */
+}
+@keyframes genedown{
+    0%{
+        bottom:0px;
+        background-image: url("../images/AboutMe/Intro-genetop.svg");
+    }
+
+    40%{
+        bottom:13px;
+        background-image: url("../images/AboutMe/Intro-genetop.svg");
+        
+    }
+    45%{
+        bottom:13px;
+        background-image: url("../images/AboutMe/Intro-geneDown.svg");
+    }
+    55%{
+        bottom:13px;
+        background-image: url("../images/AboutMe/Intro-geneDown.svg");
+    }
+    60%{
+        bottom:13px;
+        background-image: url("../images/AboutMe/Intro-genetop.svg");
+    }
+    100%{
+        bottom:0px;
+        background-image: url("../images/AboutMe/Intro-genetop.svg");
+    }
 }
 .logo-explain:nth-child(2) p{
     margin-top: 190px;
@@ -621,7 +707,136 @@ height: 40%;
     height: 130px;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url("../images/AboutMe/Intro-rbs.svg");
+    /* background-image: url("../images/AboutMe/Intro-rbs.svg"); */
+}
+.logo-explainArea .logo-explain:nth-child(3) .explain-img span:nth-child(1){
+    /* background-color: red; */
+    position: absolute;
+    top:15px;
+    align-self: center;
+    margin: auto;
+    width: 50px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../images/AboutMe/Intro-r.svg");
+    animation: ration 10s ease-in-out infinite;
+}
+@keyframes ration {
+    0%{
+        top:15px;
+       
+    }
+
+    25%{
+        top:45px;
+       opacity: 1;
+        
+        
+    }
+    30%{
+        top:45px;
+        opacity: 0;
+    }
+   70%{  
+        opacity: 0;
+        top:45px;
+    }
+    75%{
+        opacity: 1;
+        top:45px;
+       
+    }
+    
+    100%{
+        top:15px;
+    }
+    
+}
+.logo-explainArea .logo-explain:nth-child(3) .explain-img span:nth-child(2){
+    /* background-color: red; */
+    position: absolute;
+    top: 45px;
+    align-self: center;
+    margin: auto;
+    width: 50px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image:url("../images/AboutMe/Intro-b.svg");
+    opacity: 0;
+    animation: rbs 10s ease-in-out infinite;
+
+}
+@keyframes rbs {
+    0%{
+        opacity: 0;
+       
+    }
+
+    25%{
+        opacity: 0;
+       }
+    27%{
+        opacity: 1;
+    }
+  
+    75%{
+        opacity: 1;
+       
+    }
+    77%{
+        opacity:0;
+       
+    }
+    
+    100%{
+        opacity:0;
+    }
+    
+}
+.logo-explainArea .logo-explain:nth-child(3) .explain-img span:nth-child(3){
+    /* background-color: red; */
+    position: absolute;
+    top: 80px;
+    align-self: center;
+    margin: auto;
+    width: 50px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../images/AboutMe/Intro-s.svg");
+    animation: sense 10s ease-in-out infinite;
+}
+@keyframes sense {
+    0%{
+        top:80px;
+       
+    }
+
+    25%{
+        top:43px;
+       opacity: 1;
+        
+        
+    }
+    30%{
+        top:43px;
+        opacity: 0;
+    }
+   70%{
+          top:43px;
+         opacity: 0;
+    }
+    75%{
+        top:43px;
+        opacity: 1;
+    }
+    
+    100%{
+        top:80px;
+    }
+    
 }
 .logo-explain:nth-child(3) p{
     margin-top: 190px;

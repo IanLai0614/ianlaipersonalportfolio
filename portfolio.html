@@ -61,7 +61,7 @@
                         <div class="w-title">Logo-design</div>
                         <div  class="w-category">#Graphic</div>
                     </div>
-                    <div class="w-img"><div class="w-image"> <a href="LogoDesign.html"> LOGODESIGN</a> </div></div>
+                    <div class="w-img"><div class="w-image"> <a href="logoDesign.html"> LOGODESIGN</a> </div></div>
                     <div class="w-intro"></div>
                 </div>
                 <div id="industrial" class="works-category" >
@@ -69,7 +69,7 @@
                         <div class="w-title">TreaTa</div>
                         <div  class="w-category">#Industrial</div>
                     </div>
-                    <div class="w-img"><div class="w-image"> <a href="LogoDesign.html"> TREATA</a> </div></div>
+                    <div class="w-img"><div class="w-image"> <a href="treata.html"> TREATA</a> </div></div>
                     <div class="w-intro"></div>
                 </div>
                 <div id="graphic" class="works-category" >
@@ -77,7 +77,7 @@
                         <div class="w-title">Dress-design</div>
                         <div  class="w-category">#Graphic</div>
                     </div>
-                    <div class="w-img"><div class="w-image"> <a href="LogoDesign.html"> DRESSDESIGN</a> </div></div>
+                    <div class="w-img"><div class="w-image"> <a href="logoDesign.html"> DRESSDESIGN</a> </div></div>
                     <div class="w-intro"></div>
                 </div>
                 <div id="industrial" class="works-category" >
@@ -85,7 +85,7 @@
                         <div class="w-title">Oknife&Broad</div>
                         <div  class="w-category">#Industrial</div>
                     </div>
-                    <div class="w-img"><div class="w-image"> <a href="LogoDesign.html"> OKNIFE&BROAD</a> </div></div>
+                    <div class="w-img"><div class="w-image"> <a href="logoDesign.html"> OKNIFE&BROAD</a> </div></div>
                     <div class="w-intro"></div>
                 </div>
                 <div id="graphic" class="works-category"  >
@@ -93,7 +93,7 @@
                         <div class="w-title">Poster-design</div>
                         <div class="w-category">#Graphic</div>
                     </div>
-                    <div class="w-img"><div class="w-image"> <a href="LogoDesign.html"> POSTERDESIGN</a> </div></div>
+                    <div class="w-img"><div class="w-image"> <a href="logoDesign.html"> POSTERDESIGN</a> </div></div>
                     <div class="w-intro"></div>
                 </div>
                 <div id="industrial" class="works-category" >
@@ -101,7 +101,7 @@
                         <div class="w-title">Strucscrew</div>
                         <div  class="w-category">#Industrial</div>
                     </div>
-                    <div class="w-img"><div class="w-image"> <a href="LogoDesign.html"> STRUCSCREW</a> </div></div>
+                    <div class="w-img"><div class="w-image"> <a href="logoDesign.html"> STRUCSCREW</a> </div></div>
                     <div class="w-intro"></div>
                 </div>
                 <div id="graphic" class="works-category" >
@@ -109,7 +109,7 @@
                         <div class="w-title">Book-design</div>
                         <div  class="w-category">#Graphic</div>
                     </div>
-                    <div class="w-img"><div class="w-image"> <a href="LogoDesign.html"> BOOKDESIGN</a> </div></div>
+                    <div class="w-img"><div class="w-image"> <a href="logoDesign.html"> BOOKDESIGN</a> </div></div>
                     <div class="w-intro"></div>
                 </div>
             </div>
@@ -124,6 +124,13 @@
         </div>
     </main>
 
+    <div class="top-btn">
+        <span class="top-bar1"></span>
+        <span class="top-bar2"></span>
+        <p>Top</p>
+        <span class="top-bar3"></span>
+        <span class="top-bar4"></span>
+    </div>
 
 
     <script src="jquery-3.4.1.min.js"></script>
@@ -193,6 +200,24 @@
                 }
             }
         )
+        $(window).scroll(function () {
+            // console.log("test")
+
+            console.log($(window).scrollTop())  //縱向滾輪位置
+            if ($(window).scrollTop() >= 500) {
+                $(".top-btn").show()
+            }
+            else {
+                $(".top-btn").hide()
+            }
+        })
+
+        $(".top-btn").click(
+            function () {
+                console.log("test")
+                $("html, body").animate({ scrollTop: 0 });
+            }
+        );
     </script>
 </body>
 
