@@ -205,10 +205,10 @@
 
             console.log($(window).scrollTop())  //縱向滾輪位置
             if ($(window).scrollTop() >= 500) {
-                $(".top-btn").show()
+                $(".top-btn").fadeIn()
             }
             else {
-                $(".top-btn").hide()
+                $(".top-btn").fadeOut()
             }
         })
 

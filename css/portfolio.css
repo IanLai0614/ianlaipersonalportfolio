@@ -534,7 +534,7 @@ background-image: url("../images/carousel/carousel-logoDesign.png");
     }
     .main-right > .main-text {
     position: absolute;
-    bottom: 5%;
+    bottom: 20%;
     right: 25px;
     line-height: 75px;
     font-size: 75px;
@@ -556,10 +556,11 @@ background-image: url("../images/carousel/carousel-logoDesign.png");
     /* background-color: rosybrown; */
     display: none;
     position: fixed;
-    left: calc(50% - 25.5px);
     bottom:40px;
     width:50px;
     height: 50px;
+    right: 35px;
+    z-index: 999;
     /* background-color: whitesmoke; */
 }
 .top-btn .top-bar1{
