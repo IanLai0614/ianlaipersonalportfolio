@@ -285,6 +285,7 @@ main {
         left: 0px;
         flex-grow: 1;
         height: 100vh;
+        z-index:3;
         /* background-color: rgb(40, 196, 136); */
     }
     .main-left > .main-text {
@@ -293,6 +294,7 @@ main {
     left: 25px;
     font-size: 75px;
     line-height: 75px;
+    
     }
  
 /* ////////////////////////////////////////////////////////////////main-left end//////////////////////////////////////////////////////////// */
@@ -305,6 +307,7 @@ main {
     justify-content: flex-start; */
     margin: auto;
     width: calc(500vw / 7);
+    max-width: 1124px;
     /* height: 100vh; */
     /* background-color: royalblue; */
     }
@@ -353,20 +356,31 @@ main {
 
 .w-majorImage{
     width: 48%;
-    max-width: 600px;
+    max-width: 540px;
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 3px;
 }
 .w-content>.gongsang{
-    background-image: url("../images/carousel/carousel-logoDesign.png");
+    background-image: url("../images/logoDesign/Gongsang.png");
 
 }
 .w-content>.hair{
     background-image: url("../images/logoDesign/hair.png");
 }
 .w-content>.freashman{
-    background-image: url("../images/logoDesign/freashman.jpg");
+    background-image: url("../images/logoDesign/freashman.png");
+}
+.w-content>.keepItReal{
+    background-image: url("../images/logoDesign/keepItReal.png");
+}
+.w-content>.drunkWolf{
+    background-image: url("../images/logoDesign/drunkWolf.png");
+}
+.w-content>.eggEater{
+    background-image: url("../images/logoDesign/eggEater.png");
 }
 .w-infor{
     /* padding: 0px 30px; */
@@ -393,11 +407,12 @@ main {
     background-size:contain;
     background-repeat: no-repeat;
     margin-bottom: 15px;
+    background-position: center;
     /* background-color: royalblue; */
 }
 .w-infor .gongsang_2{
     align-self: center;
-    width: 100px;
+    width: 95px;
     height: 130px;
     background-image: url("../images/logoDesign/Gongsang-logo2.png");
 }
@@ -412,6 +427,22 @@ main {
     height: 110px;
     background-image: url("../images/logoDesign/freashman-logo.png");
 }
+.w-infor>.keepItReal_2{
+    width: 120px;
+    height: 105px;
+    background-image: url("../images/logoDesign/keepItReal-logo.png");
+}
+.w-infor>.drunkWolf_2{
+    width: 150px;
+    height: 135px;
+    background-image: url("../images/logoDesign/drunkWolf-logo.png");
+}
+.w-infor>.eggEater_2{
+    width: 120px;
+    height: 135px;
+    background-image: url("../images/logoDesign/eggEater-logo.png");
+}
+
 .w-text{
     margin-top: 30px;
     align-self: center;
@@ -432,6 +463,8 @@ main {
 
 .w-text p{
     line-height: 20px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 300;
 }
 /* ////////////////////////////////////////////////////////////////main-mid end//////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////main-mid end//////////////////////////////////////////////////////////// */
@@ -443,6 +476,7 @@ main {
     right: 0px;
     width: calc(100vw / 7);
     height: 100vh;
+    z-index:3;
     /* background-color: salmon; */
     }
     .main-right > .main-decoration {
@@ -474,7 +508,7 @@ main {
     position: absolute;
     bottom: 0px;
     right: 0px;
-    z-index: 3;
+    z-index:4;
     }
 
 /* ////////////////////////////////////////////////////////////////main-right end//////////////////////////////////////////////////////////// */
@@ -593,8 +627,8 @@ main {
 
 footer{
     width: 100%;
-    height: 100px;
-    /* background-color: rgb(220, 220, 220); */
+    height: 150px;
+    background-color: rgb(220, 220, 220);
     /* background-color: rgb(62, 58, 57); */
     display: flex;
     flex-direction: column;
@@ -602,34 +636,39 @@ footer{
     box-sizing: border-box;
     padding: 30px;
     position: relative;
+
 }
 footer h1{
-    /* text-align: center; */
-    position: absolute;
-    top: -10px;
+   
     align-self: center;
     line-height: 20px;
     font-family: 'Roboto', sans-serif;
-    font-style: italic;
-    font-weight: 600;
+    /* font-style: italic; */
+    font-weight: 700;
     font-size: 20px;
+    letter-spacing: 0.1em;
 }
 .workLink{
-    width: calc(500vw / 7);
-    max-width: 1124px;
-    min-width: 600px;
+    width:250px;
     height: 50px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-self: center;
     padding: 10px 30px;
-    background-color: rgb(220, 220, 220);
+    background-color: rgb(42, 42, 42);
     /* border: 1px solid rgb(42, 42, 42); */
     border-radius: 25px;
     box-sizing: border-box;
+    /* margin-bottom: 30px; */
+
+}
+.workLink:hover{
+    background-color: #16E9D8;
+    transform: scale(1.1);
 }
 .workLink li{
+  width: 100%;
   height: 50px;
   line-height: 50px;
   align-self: center;
@@ -638,55 +677,54 @@ footer h1{
   /* background-color: rebeccapurple; */
 }
 .workLink a{
-    font-size: 14px;
-    line-height: 14px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    line-height: 50px;
     text-decoration: none;
     /* color:rgb(42, 42, 42); */
+    /* background-color: blueviolet; */
     color: white;
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-weight:500;
     letter-spacing: 0.1em;
     position: relative;
-    /* transition: 0.2s; */
+   
 }
-.workLink li:hover a{
+.workLink:hover li a{
     color: rgb(42, 42, 42);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 16px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 0em;
 }
 .workLink a::after{
-    content: "";
-    width: 10px;
-    height: 1px;
-    background-color: rgb(42, 42, 42);
+    content: "\003C";
+    opacity: 0;
     position: absolute;
-    transform: scaleX(0) translateY(-50%);
     transition: 0.3s;
     right: -25px;
-    top: 50%;
+    top: 0;
 
 }
-.workLink li:hover a::after{
-    transform: scaleX(1);
-    right: -15px;
+.workLink:hover li a::after{
+    opacity: 1;
+    right: 0px;
     display: block;
 }
 
 .workLink a::before{
-    content: "";
-    width: 10px;
-    height: 1px;
-    background-color: rgb(42, 42, 42);
+    content: "\003E";
     position: absolute;
-    transform: scaleX(0) translateY(-50%);
+    opacity: 0;
     transition: 0.3s;
     left: -25px;
-    top: 50%;
+    top: 0;
 
 }
-.workLink li:hover a::before{
-    transform: scaleX(1);
-   left: -15px;
+.workLink:hover li a::before{
+    opacity: 1;
+   left: 0px;
     display: block;
 }
