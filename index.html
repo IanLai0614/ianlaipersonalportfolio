@@ -84,12 +84,12 @@
                     <div class="left"></div>
 
                     <div class="main-works-carousel ">
-                        <div class=" logo-design"><a href="brandDesign.html"></a> </div>
+                        <div class=" logo-design"><a href="LogoDesign.html"></a> </div>
                         <div class=" treata"><a href="treata.html"></a></div>
                         <div class=" dress-design"><a href="dressDesign.html"></a> </div>
                         <div class=" oknife"><a href="oknife.html"></a></div>
                         <div class=" poster-design"><a href="posterDesign.html"></a> </div>
-                        <div class=" strucscrew"><a href="logoDesign.html"></a> </div>
+                        <div class=" strucscrew"><a href="strucscrew.html"></a> </div>
                         <div class=" book-design"><a href="bookDesign.html"></a> </div>
                     </div>
 
@@ -181,13 +181,13 @@
                     $(".menu-content").removeClass("show")
                     $(".main-right>.main-text").text("PORTFOLIO")
                     $(".main-right>.block").hide()
-                    $(".main-right>.main-text").css({ "bottom": "10%", "color": "#3E3A39" })
+                    $(".main-right>.main-text").css({ "bottom": "10%","transform":" translateY(0%)", "color": "#3E3A39" })
                 }
                 else {
                     $(".menu-content").addClass("show")
                     $(".main-right>.main-text").text("MENU")
                     $(".main-right>.block").show()
-                    $(".main-right>.main-text").css({ "bottom": "35%", "color": "#DCDCDC" })
+                    $(".main-right>.main-text").css({ "bottom": "calc(50% - 37.5px)","transform":" translateY(50%)", "color": "#DCDCDC" })
                 }
             }
         )

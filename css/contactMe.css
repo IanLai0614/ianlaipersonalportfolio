@@ -399,35 +399,35 @@ main {
     #name-path .st0:nth-child(1){
         stroke-dasharray: 213px;
         stroke-dashoffset:213px ;
-        animation: name-animate 3s ease-in-out  forwards;
+        animation: name-animate 3s ease-in-out infinite forwards ;
         }
         
         #name-path .st0:nth-child(2){
             stroke-dasharray: 407px;
             stroke-dashoffset:407px ;
-            animation: name-animate 3s ease-in-out  forwards;
+            animation: name-animate 3s ease-in-out infinite forwards ;
         }
         
         #name-path .st0:nth-child(3){
             stroke-dasharray: 407px;
             stroke-dashoffset: 407px ;
-            animation: name-animate 3s ease-in-out  forwards;
+            animation: name-animate 3s ease-in-out infinite forwards ;
         }
         
         #name-path .st0:nth-child(4){
             stroke-dasharray: 475px;
             stroke-dashoffset:475px ;
-            animation: name-animate 3s ease-in-out  forwards;
+            animation: name-animate 3s ease-in-out infinite forwards ;
         }
         #name-path .st0:nth-child(5){
             stroke-dasharray: 290.8px;
             stroke-dashoffset:290.8px ;
-            animation: name-animate 3s ease-in-out  forwards;
+            animation: name-animate 3s ease-in-out infinite forwards ;
         }
         #name-path .st0:nth-child(6){
             stroke-dasharray: 213.6px;
             stroke-dashoffset:213.6px ;
-            animation: name-animate 3s ease-in-out  forwards;
+            animation: name-animate 3s ease-in-out infinite forwards ;
         }
         @keyframes name-animate{
             to{

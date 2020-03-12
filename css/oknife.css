@@ -285,14 +285,18 @@ main {
         left: 0px;
         flex-grow: 1;
         height: 100vh;
+        z-index: 3;
         /* background-color: rgb(40, 196, 136); */
     }
     .main-left > .main-text {
     position: absolute;
-    top: 20vh;
+    top: calc(50% + 37.5px);
+    transform: translateY(-50%);
+    white-space: nowrap;
     left: 25px;
     font-size: 75px;
     line-height: 75px;
+    z-index: 3;
     }
  
 /* ////////////////////////////////////////////////////////////////main-left end//////////////////////////////////////////////////////////// */
@@ -396,6 +400,7 @@ main {
     align-self: center;
     height: 1px;
     background-color: rgb(42, 42, 42);
+    margin-bottom: 10px;
 }
 
 .w-Image{
@@ -410,7 +415,7 @@ main {
 
 h2{
     text-align: left;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-size: 20px;
     font-weight: 700;
     font-family: 'Roboto', sans-serif;
@@ -419,6 +424,23 @@ h2{
 .w-infor p{
     line-height: 25px;
     margin-bottom: 20px;
+}
+.w-productConcept .w-infor span{
+    height: 0.8px;
+}
+.w-problemDefinition {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.w-problemDefinition>.w-Image{
+    width: 48%;
+    height: 100%;
+    background-image: url("../images/oknife/problemDefinition.png");
+    border-radius: 3px;
 }
 
 .designerArea{
@@ -430,9 +452,14 @@ h2{
 .designerArea>.designer:nth-child(1)> .designerImg{
     width: 80px;
     height: 80px;
-    background-image: url("../images/treata/designer1.png");
+    background-image: url("../images/oknife/member1.png");
+    background-position: center;
+    background-size: cover;
     border-radius: 5px;
     margin-bottom: 10px;
+    border: 5px solid #EA7A07;
+    box-sizing: border-box;
+    margin-top: 10px;
 }
 .designerArea>.designer:nth-child(2)> .designerImg{
     width: 80px;
@@ -440,16 +467,14 @@ h2{
     /* background-color: royalblue; */
     border-radius: 5px;
     margin-bottom: 10px;
-    background-image: url("../images/treata/designer2.png");
+    background-image: url("../images/oknife/member2.png");
+    border: 5px solid #EA7A07;
+    box-sizing: border-box;
+    background-position: center;
+    background-size: cover;
+    margin-top: 10px;
 }
-.designerArea>.designer:nth-child(3)> .designerImg{
-    width: 80px;
-    height: 80px;
-    /* background-color: royalblue; */
-    border-radius: 5px;
-    margin-bottom: 10px;
-    background-image: url("../images/treata/designer3.png");
-}
+
 .designer{
     display: flex;
     flex-direction: column;
@@ -489,7 +514,9 @@ h2{
     margin: 0px;
     margin-bottom: 30px;
     height: 400px;
-    background-image: url("../images/treata/designConcept1.png");
+    background-image: url("../images/oknife/designConcept1.png");
+    background-repeat: no-repeat;
+
 }
 
 .w-designConcept{
@@ -511,25 +538,12 @@ margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 500px;
+  /* height: 500px; */
   position: relative;
+  width: 100%;
   /* background-color: sandybrown; */
 }
-.w-designConcept>.left{
-    width: calc(60% - 10px);
-}
-.w-designConcept>.left .w-Image{
-    background-image: url("../images/treata/designConcept2.png");
-    background-size: auto 300px;
-    /* background-color: tomato; */
-}
-.w-designConcept>.right{
-    width: calc(40% - 10px);   
-    }
-    .w-designConcept>.right .w-Image{
-        background-image: url("../images/treata/designConcept3.png");
-        background-size: auto 300px;
-    }
+
 .w-designConcept .w-Image{
     width: 100%;
     height: 300px;
@@ -547,7 +561,7 @@ margin-bottom: 10px;
     display: flex;
     flex-direction:column;
     justify-content: space-between;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
     /* background-color: slateblue; */
 }
 .w-productIntro h2{
@@ -562,7 +576,7 @@ margin-bottom: 10px;
     display: block;
     width: 100%;
     align-self: center;
-    height: 1px;
+    height: 0.5px;
     background-color: rgb(42, 42, 42);
     margin-bottom: 20px;
 }
@@ -579,6 +593,7 @@ margin-bottom: 10px;
     align-self: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
+   
 }
 .w-productIntro .w-Image{
     background-repeat: no-repeat;
@@ -597,10 +612,10 @@ margin-bottom: 10px;
     border-radius: 3px;
 }
 .w-productIntro .left .nth1 .w-Image{
- background-image: url("../images/treata/treataIntroduction1.png");
+ background-image: url("../images/oknife/oknifeIntroduction1.png");
 }
 .w-productIntro .w-infor .nth2{
-    width: calc(50% - 10px);
+    width: 48%;
     /* background-color: slateblue; */
 }
 .w-productIntro .w-infor .nth2 .w-Image{
@@ -610,11 +625,12 @@ margin-bottom: 10px;
     border-radius: 3px;
 }
 .w-productIntro .left .nth2 .w-Image{
-    background-image: url("../images/treata/treataIntroduction2.png");
+    background-image: url("../images/oknife/oknifeIntroduction2.png");
    }
 .w-productIntro .w-infor .nth3{
-    width: calc(50% - 10px);
+    width: 48%;
     /* background-color: slateblue; */
+    align-self: flex-end;
 }
 .w-productIntro .w-infor .nth3 .w-Image{
     width: 100%;
@@ -623,181 +639,131 @@ margin-bottom: 10px;
     border-radius: 3px;
 }
 .w-productIntro .left .nth3 .w-Image{
-    background-image: url("../images/treata/treataIntroduction3.png");
+    background-image: url("../images/oknife/oknifeIntroduction3.png");
    }
-.w-productIntro .right .nth2 .w-Image{
-    background-image: url("../images/treata/treataIntroduction4.png");
-   }
-   .w-productIntro .right .nth3 .w-Image{
-    background-image: url("../images/treata/treataIntroduction5.png");
-   }
-.carousel .w-carouselArea{
-    width: calc(100% + 100px);
-    display: flex;
-    flex-direction:row;
-    justify-content: space-between;
-    align-self: center;
-    flex-wrap: nowrap;
-    position: relative;
-}
-.carousel .left {
-    width:36px;
-    height: 64px;
-    background-image: url("../images/index/index-leftArrow.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    align-self: center;
-    cursor: pointer;
-    transform: translateY(-50%);
-    }
-.carousel .left:hover{
-        background-image: url("../images/index/index-leftArrowHover.svg")
-    }
-.carousel .right {
-        width:36px;
-        height: 64px;
-        background-image: url("../images/index/index-rightArrow.svg");
-        background-repeat: no-repeat;
-        background-size: contain;
-        align-self: center;
-        cursor: pointer;
-        transform: translateY(-50%);
-}
-.carousel .right:hover{
-        background-image: url("../images/index/index-rightArrowHover.svg")
-}
-.carousel{
+
+.w-productIntro2{
     width: 100%;
     /* height:400px; */
     display: flex;
     flex-direction:column;
-    justify-content: space-between;
-    margin-bottom: 60px;
-    /* background-color: slateblue; */
+    justify-content: flex-start;
+    margin-bottom: 80px;
+    flex-wrap: nowrap;
+    /* background-color: orangered; */
 }
-.carousel span{
-    display: block;
-    width: 100%;
-    align-self: center;
-    height: 1px;
-    background-color: rgb(42, 42, 42);
-    margin-bottom: 20px;
-}
-.carousel .w-inforArea{
-    width: calc(100% - 100px);
-    height: 450px;
-    background-color: rgb(220, 220, 220);
-    align-self: center;
-    margin-bottom: 60px;
-    border-radius: 3px;
-    /* overflow: hidden; */
-    padding: 20px;
-  
-}
-.carousel .w-infor{
-    display: flex;
-    flex-direction:column;
-    justify-content: space-between;
-}
-.carousel .w-infor .w-Image{
-    width: 100%;
-    height: 300px;
-    /* background-color: royalblue; */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 3px;
-}
-.w-appIntro .w-carouselArea .w-inforArea .nth1 .w-Image{
-    background-image: url("../images/treata/appIntroduction1.png");
-}
-.w-appIntro .w-carouselArea .w-inforArea .nth2 .w-Image{
-    background-image: url("../images/treata/appIntroduction2.png");
-}
-.w-appIntro .w-carouselArea .w-inforArea .nth3 .w-Image{
-    background-image: url("../images/treata/appIntroduction3.png");
-}
-.w-appIntro .w-carouselArea .w-inforArea .nth4 .w-Image{
-    background-image: url("../images/treata/appIntroduction4.png");
-}
-.w-instructions{
-    flex-wrap: wrap;
+.w-productIntro2 .w-inforArea{
     display: flex;
     flex-direction:row;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+.w-productIntro2 h2{
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+}
+.w-productIntro2 span{
+    /* display: block; */
+    width: 100%;
+    align-self: center;
+    height: 0.5px;
+    background-color: rgb(42, 42, 42);
+    margin-bottom: 20px;
+}
+.w-productIntro2 .w-infor{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.w-productIntro2 .w-introgroup{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    /* height: 500px; */
+    position: relative;
+    width: 48%;
+    /* background-color: sandybrown; */
+  }
+  .w-productIntro2 .w-introgroup .w-Image{
+    width: 100%;
+    /* background-color: salmon; */
+    border-radius: 3px;
+    height: 300px;
+  }
+  .w-productIntro2 .w-introgroup p{
+    width: 100%;
+    align-self: flex-start;
+  }
+  .w-productIntro2 .w-infor .nth1{
+    width: 100%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.w-productIntro2 .nth1 p{
+    width: 100%;
+    align-self: center;
+  }
+.w-productIntro2 .w-infor .nth1 .w-Image{
+    background-image: url("../images/oknife/bourdIntroduction1.png");
+    width: 100%;
+    height: 300px;
+}
+.w-productIntro2 .w-infor .nth2 .w-Image{
+    background-image: url("../images/oknife/bourdIntroduction2.png");
+    width: 100%;
+    height: 200px;
+    background-color: rgb(220, 220, 220);
+}
+.w-productIntro2 .w-infor .nth3 .w-Image{
+    background-image: url("../images/oknife/bourdIntroduction3.png");
+    width: 100%;
+    height: 200px;
+    background-color: rgb(220, 220, 220);
+}
+
+.w-instructions{
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-start;
     /* background-color: tan; */
     margin-bottom: 80px;
 }
 .w-instructions h2{
     width: 100%;
     text-align: left;
+    margin-bottom: 10px;
 }
-.w-instructions .w-carouselArea{
-    width: calc(40% + 100px);
-    display: flex;
-    flex-direction:row;
-    align-self: flex-start;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    position: relative;
-    margin-left: -50px;
-}
-.w-instructions .w-imageArea{
-    width: calc(55% - 50px);
-    height: 450px;
-    display: flex;
-    flex-direction:row;
-    align-self: flex-start;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    position: relative;
-    margin-left: 20px;
-    /* background-color: springgreen; */
-}
-.w-instructions .w-carouselArea .w-inforArea .nth1 .w-Image{
-    background-image: url("../images/treata/Instructions1.png");
-}
-.w-instructions .w-carouselArea .w-inforArea .nth2 .w-Image{
-    background-image: url("../images/treata/Instructions2.png");
-}
-.w-instructions .w-carouselArea .w-inforArea .nth3 .w-Image{
-    background-image: url("../images/treata/Instructions3.png");
-}
-.w-instructions .w-carouselArea .w-inforArea .nth4 .w-Image{
-    background-image: url("../images/treata/Instructions4.png");
-}
-.w-instructions .w-carouselArea .w-inforArea .nth5 .w-Image{
-    background-image: url("../images/treata/Instructions5.png");
-}
-.w-instructions .w-imageArea .w-Image:nth-child(1)
-{
+.w-instructions span{
     width: 100%;
-    height: calc(50% - 10px);
-    background-image: url("../images/treata/Instructions6.png");
+    align-self: center;
+    height: 0.5px;
+    background-color: rgb(42, 42, 42);
+    margin-bottom: 20px;
+}
+
+
+.w-instructions .w-Image{
+    width: 100%;
+    height: 450px;
+    background-image: url("../images/oknife/researchData.png");
     border-radius: 3px;
     margin-bottom: 0px;
+    background-color: rgb(220, 220, 220);
     
 }
-.w-instructions .w-imageArea .w-Image:nth-child(2)
-{
-    width: calc(50% - 10px);
-    height: calc(50% - 10px);
-    /* background-color: slateblue; */
-    background-image: url("../images/treata/Instructions7.png");
-    border-radius: 3px;
-    align-self: flex-end;
-    margin-bottom: 0px;
-}
-.w-instructions .w-imageArea .w-Image:nth-child(3)
-{
-    width: calc(50% - 10px);
-    height: calc(50% - 10px);
-    /* background-color: slateblue; */
-    background-image: url("../images/treata/Instructions8.png");
-    border-radius: 3px;
-    align-self: flex-end;
-    margin-bottom: 0px;
-}
+
+
 .slick-dots{
     left: 50%;
     transform: translateX(-50%);
@@ -823,7 +789,7 @@ margin-bottom: 10px;
 .w-finalModel .w-Image{
     width: 100%;
     /* background-color: tomato; */
-    background-image: url("../images/treata/finalModel.png");
+    background-image: url("../images/oknife/finalModel.png");
     height: 400px;
     background-size: cover;
     border-radius: 3px;
@@ -858,7 +824,9 @@ margin-bottom: 10px;
     }
     .main-right > .main-text {
     position: absolute;
-    bottom: 20%;
+    bottom:  calc(50% - 37.5px);
+    transform: translateY(50%);
+    white-space: nowrap;
     right: 25px;
     line-height: 75px;
     font-size: 75px;
@@ -996,6 +964,7 @@ footer{
     box-sizing: border-box;
     padding: 30px;
     position: relative;
+    z-index: 1;
 
 }
 footer h1{

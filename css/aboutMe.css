@@ -461,7 +461,7 @@ main {
     }
     .main-right > .main-text {
     position: absolute;
-    bottom: 5%;
+    bottom: 10%;
     right: 25px;
     line-height: 75px;
     font-size: 75px;

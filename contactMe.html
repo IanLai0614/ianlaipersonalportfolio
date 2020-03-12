@@ -111,7 +111,7 @@
 
             }, function () {
                 $(".main-text").css({ "color": "#3E3A39" })
-                $("#name-path .st0").css({ "animation": "none" })
+                $("#name-path .st0").css({ "animation": "name-animate 3s ease-in-out infinite forwards" })
             }
         )
 
@@ -133,13 +133,14 @@
                 if ($(".menu-content").hasClass("show")) {
                     $(".menu-content").removeClass("show")
                     $(".main-right>.block").hide()
-                    $(".main-right>.main-text").css({ "bottom": "10%", "color": "#3E3A39" })
+                    $(".main-right>.main-text").text("CONTACT ME")
+                    $(".main-right>.main-text").css({ "bottom": "10%","transform":" translateY(0%)", "color": "#3E3A39","white-space":"nowrap" })
                 }
                 else {
                     $(".menu-content").addClass("show")
                     $(".main-right>.main-text").text("MENU")
                     $(".main-right>.block").show()
-                    $(".main-right>.main-text").css({ "bottom": "35%", "color": "#DCDCDC" })
+                    $(".main-right>.main-text").css({ "bottom": "calc(50% - 37.5px)","transform":" translateY(50%)", "color": "#DCDCDC" })
                 }
             }
         )

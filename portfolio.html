@@ -61,7 +61,7 @@
                         <div class="w-title">Logo-design</div>
                         <div  class="w-category">#Graphic</div>
                     </div>
-                    <div class="w-img"><div class="w-image"> <a href="brandDesign.html"> LOGODESIGN</a> </div></div>
+                    <div class="w-img"><div class="w-image"> <a href="LogoDesign.html"> LOGODESIGN</a> </div></div>
                     <div class="w-intro"></div>
                 </div>
                 <div id="industrial" class="works-category" >
@@ -101,7 +101,7 @@
                         <div class="w-title">Strucscrew</div>
                         <div  class="w-category">#Industrial</div>
                     </div>
-                    <div class="w-img"><div class="w-image"> <a href="logoDesign.html"> STRUCSCREW</a> </div></div>
+                    <div class="w-img"><div class="w-image"> <a href="strucscrew.html"> STRUCSCREW</a> </div></div>
                     <div class="w-intro"></div>
                 </div>
                 <div id="graphic" class="works-category" >
@@ -190,13 +190,14 @@
                 if ($(".menu-content").hasClass("show")) {
                     $(".menu-content").removeClass("show")
                     $(".main-right>.block").hide()
-                    $(".main-right>.main-text").css({ "bottom": "10%", "color": "#3E3A39" })
+                    $(".main-right>.main-text").text("PORTFOLIO")
+                    $(".main-right>.main-text").css({ "bottom": "10%","transform":" translateY(0%)", "color": "#3E3A39" })
                 }
                 else {
                     $(".menu-content").addClass("show")
                     $(".main-right>.main-text").text("MENU")
                     $(".main-right>.block").show()
-                    $(".main-right>.main-text").css({ "bottom": "35%", "color": "#DCDCDC" })
+                    $(".main-right>.main-text").css({ "bottom": "calc(50% - 37.5px)","transform":" translateY(50%)", "color": "#DCDCDC" })
                 }
             }
         )

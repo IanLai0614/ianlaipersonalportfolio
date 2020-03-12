@@ -289,7 +289,8 @@ main {
     }
     .main-left > .main-text {
     position: absolute;
-    top: 20vh;
+    top: 25vh;
+    white-space: nowrap;
     left: 25px;
     font-size: 75px;
     line-height: 75px;
@@ -394,6 +395,7 @@ main {
     align-self: center;
     height: 1px;
     background-color: rgb(42, 42, 42);
+    margin-bottom: 10px;
 }
 
 .w-Image{
@@ -408,7 +410,7 @@ main {
 
 h2{
     text-align: left;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-size: 20px;
     font-weight: 700;
     font-family: 'Roboto', sans-serif;
@@ -417,6 +419,20 @@ h2{
 .w-infor p{
     line-height: 25px;
     margin-bottom: 20px;
+}
+.w-problemDefinition{
+    width: 100%;
+    height: 350px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.w-problemDefinition>.w-Image{
+    width: 48%;
+    height: 100%;
+    background-image: url("../images/treata/problemdefinition.png");
+    border-radius: 3px;
 }
 
 .designerArea{
@@ -670,7 +686,7 @@ margin-bottom: 10px;
     display: flex;
     flex-direction:column;
     justify-content: space-between;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
     /* background-color: slateblue; */
 }
 .carousel span{
@@ -856,7 +872,9 @@ margin-bottom: 10px;
     }
     .main-right > .main-text {
     position: absolute;
-    bottom: 20%;
+    bottom:  calc(50% - 37.5px);
+    transform: translateY(50%);
+    white-space: nowrap;
     right: 25px;
     line-height: 75px;
     font-size: 75px;

@@ -41,7 +41,7 @@
     </header>
     <main>
         <div class="main-left">
-            <div class="main-text">BOOK-DESIGN</div>
+            <div class="main-text"><p>BOOK-DESIGN</p> </div>
         </div>
 
         <div class="main-mid">
@@ -194,14 +194,13 @@
                 if ($(".menu-content").hasClass("show")) {
                     $(".main-right>.main-text").text("PORTFOLIO")
                     $(".menu-content").removeClass("show")
-                    $(".main-right>.block").hide()
-                    $(".main-right>.main-text").css({ "bottom": "20%" })
+                    $(".main-right>.block").hide()                 
                 }
                 else {
                     $(".menu-content").addClass("show")
                     $(".main-right>.main-text").text("MENU")
                     $(".main-right>.block").show()
-                    $(".main-right>.main-text").css({ "bottom": "35%" })
+                    
                 }
             }
         )

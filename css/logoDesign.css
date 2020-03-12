@@ -290,10 +290,12 @@ main {
     }
     .main-left > .main-text {
     position: absolute;
-    top: 20vh;
     left: 25px;
     font-size: 75px;
     line-height: 75px;
+    top: calc(50% + 37.5px);
+    transform: translateY(-50%);
+    white-space: nowrap;
     
     }
  
@@ -496,7 +498,9 @@ main {
     }
     .main-right > .main-text {
     position: absolute;
-    bottom: 20%;
+    bottom:  calc(50% - 37.5px);
+    transform: translateY(50%);
+    white-space: nowrap;
     right: 25px;
     line-height: 75px;
     font-size: 75px;

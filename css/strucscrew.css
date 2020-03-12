@@ -285,17 +285,18 @@ main {
         left: 0px;
         flex-grow: 1;
         height: 100vh;
-        z-index:3;
+        z-index: 3;
         /* background-color: rgb(40, 196, 136); */
     }
     .main-left > .main-text {
     position: absolute;
-    left: 25px;
-    font-size: 75px;
-    line-height: 75px;
     top: calc(50% + 37.5px);
     transform: translateY(-50%);
     white-space: nowrap;
+    left: 25px;
+    font-size: 75px;
+    line-height: 75px;
+    z-index: 3;
     }
  
 /* ////////////////////////////////////////////////////////////////main-left end//////////////////////////////////////////////////////////// */
@@ -303,16 +304,32 @@ main {
 /* ////////////////////////////////////////////////////////////////main-left end//////////////////////////////////////////////////////////// */
 .main-mid {
    
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    justify-content: flex-start; */
+    justify-content: flex-start;
     margin: auto;
     width: calc(500vw / 7);
-    max-width: 1124px;
+    z-index: 2;
     /* height: 100vh; */
     /* background-color: royalblue; */
     }
-
+.imageboard{
+    
+    background-image: url("../images/strucscrew/imageBoard.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    align-self: center;
+    /* background-attachment:fixed; */
+    max-width: 1124px;
+    width: 100%;
+    height: 500px;
+    margin: 30px 0px;
+    margin-bottom: 80px;
+    border-radius: 5px;
+    max-width: 1124px;
+    border-radius: 5px;
+}
 .main-mid h1{
     margin-top: 100px;
     width: 100%;
@@ -331,58 +348,35 @@ main {
     width: 100%;
     max-width: 1124px;
     display: flex;
-    flex-direction:row ;
+    flex-direction:column ;
     justify-content: space-between;
     flex-wrap: wrap;
     /* background-color: bisque; */
 }
-.works-item{
+
+.w-productConcept{
     width: 100%;
-    /* background-color: #16E9D8; */
-    margin: 20px 0px;
-    position: relative;
-    display: flex;
-    flex-direction:column ;
-    justify-content: space-between;
-}
-.w-content{
-    width: 100%;
-    height: 450px;
+    height:350px;
     display: flex;
     flex-direction:row ;
     justify-content: space-between;
     margin-bottom: 80px;
     /* background-color: royalblue; */
 }
-
+.w-productConcept>.w-majorImage{
+    background-image: url("../images/strucscrew/productConcept.png");
+    border-radius: 3px;
+    background-position: center;
+}
 .w-majorImage{
     width: 48%;
-    max-width: 540px;
+    max-width: 600px;
     height: 100%;
-    border-radius: 3px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-.w-content>.first{
-    background-image: url("../images/posterDesign/daily.png");
 
-}
-.w-content>.second{
-    background-image: url("../images/posterDesign/designing.png");
-}
-.w-content>.third{
-    background-image: url("../images/posterDesign/paper.png");
-}
-.w-content>.fourth{
-    background-image: url("../images/posterDesign/winter.png");
-}
-.w-content>.fifth{
-    background-image: url("../images/posterDesign/futurismo.png");
-}
-.w-content>.sixth{
-    background-image: url("../images/posterDesign/sand.png");
-}
 .w-infor{
     /* padding: 0px 30px; */
     width: 48%;
@@ -390,162 +384,291 @@ main {
     /* background-color: #16E9D8; */
     display: flex;
     flex-direction: column;
-    justify-content:space-between;
+    justify-content: flex-start;
     align-self: center;
-   
-}
-.w-infor h1{
-    margin-top: 0px;
-    height: 40px;
-    text-align: center;
-    margin-bottom: 30px;
-    line-height: 40px;
-    font-size: 40px;
-    font-weight: 500;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-style: normal;
-    color: rgb(62, 58, 57);
-}
-.w-infor>span{
-    display: block;
-    width: 100%;
-    align-self: center;
-    height: 1px;
-    background-color: rgb(42, 42, 42);
-}
-
-.w-Image{
-    align-self: center;
-    background-size:contain;
-    background-repeat: no-repeat;
-    margin-bottom: 15px;
-    background-position: center;
-    /* background-color: royalblue; */
-}
-
-.w-text{
-    margin-top: 30px;
-    align-self: center;
-    width: 100%;
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 16px;
     font-weight: 300;
     letter-spacing: 0.1em;
     color: rgb(62, 58, 57);
-    margin-bottom: 30px;
+   
 }
-.w-text h2{
+
+.w-infor span{
+    display: block;
+    width: 100%;
+    align-self: center;
+    height: 1px;
+    background-color: rgb(42, 42, 42);
+    margin-bottom: 10px;
+}
+
+.w-Image{
+    align-self: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 15px;
+    /* background-color: royalblue; */
+}
+
+
+h2{
     text-align: left;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-size: 20px;
     font-weight: 700;
     font-family: 'Roboto', sans-serif;
 }
 
-.w-text p{
-    line-height: 20px;
+.w-infor p{
+    line-height: 25px;
+    margin-bottom: 20px;
 }
 
-.w-infor .color{
-    align-self: center;
+.w-problemDefinition {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 80px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
-.color span{
-    width: 15px;
-    height: 15px;
-    margin: 0px 10px;
-    /* background-color: royalblue; */
-    border-radius: 50%;
+.w-problemDefinition>.w-Image{
+    width: 48%;
+    height: 100%;
+    background-image: url("../images/strucscrew/structuralism.png");
+    border-radius: 3px;
 }
-.first_1>.color>span:nth-child(1){
-    background-color: #F6DB95;
+
+.designerArea{
+    /* width: 50%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
-.first_1>.color>span:nth-child(2){
- 
-    background-color: #585555;
-}
-.first_1>.color>span:nth-child(3){
+.designerArea>.designer:nth-child(1)> .designerImg{
+    width: 80px;
+    height: 80px;
+    background-image: url("../images/oknife/member1.png");
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
     box-sizing: border-box;
-    border: 1px solid rgb(42, 42, 42);
-    background-color: whitesmoke;
+    margin-top: 10px;
 }
 
-.second_2>.color>span:nth-child(1){
-    background-color: #061930;
+
+.designer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: 20px;
 }
-.second_2>.color>span:nth-child(2){
- 
-    background-color: #E95267;
+.designer h3{
+    width: 80px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Noto Sans TC', sans-serif;
+    /* background-color: sandybrown; */
+    margin-bottom: 5px;
+    text-align: center;
+   
 }
-.second_2>.color>span:nth-child(3){
-    background-color: #DFBB31;
-}
-.second_2>.color>span:nth-child(4){
- 
-    background-color: #6FBA3A;
-}.second_2>.color>span:nth-child(5){
- 
-    background-color: #6AC7E2;
+.designer h4{
+    /* width: 80px; */
+    /* text-align: justify; */
+    font-size: 9px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
 }
 
-.third_3>.color>span:nth-child(1){
-    background-color: #191E1C;
+.w-designConcept{
+    width: 100%;
+    /* height:350px; */
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    margin-bottom: 80px;
 }
-.third_3>.color>span:nth-child(2){
-    box-sizing: border-box;
-    border: 1px solid rgb(161, 161, 161);
-    background-color: #D2D3D4;
-}
-.third_3>.color>span:nth-child(3){
-    background-color: #FFFFFF;
-    box-sizing: border-box;
-    border: 1px solid rgb(161, 161, 161);
+.w-designConcept>.imageboard{
+    background-attachment:fixed;
+    margin: 0px;
+    margin-bottom: 30px;
+    height: 400px;
+    background-image: url("../images/strucscrew/designConcept.png");
+    background-repeat: no-repeat;
+
 }
 
-.fourth_4>.color>span:nth-child(1){
-    background-color: #D7E3E7;
+.w-designConcept{
+    width: 100%;
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-between;
+    margin-bottom: 60px;
 }
-.fourth_4>.color>span:nth-child(2){
- 
-    background-color: #94B6D8;
+.w-designConcept h2{
+width: 100%;
+margin-bottom: 10px;
 }
-.fourth_4>.color>span:nth-child(3){
-    background-color: #A76A9F;
-}
-.fourth_4>.color>span:nth-child(4){
-    background-color: #373260;
-}
-.fourth_4>.color>span:nth-child(5){
-    background-color: #715B27;
-}
-
-.fifth_5>.color>span:nth-child(1){
-    background-color: #4F2523;
-}
-.fifth_5>.color>span:nth-child(2){
- 
-    background-color: #1D857D;
-}
-.fifth_5>.color>span:nth-child(3){
-    background-color: #1F2C36;
-}
-.fifth_5>.color>span:nth-child(4){
-    background-color: #C0C0C0;
+.w-designConcept .w-infor span{
+    margin-bottom: 10px;
+   }
+.w-designConcept .w-infor{
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* height: 500px; */
+  position: relative;
+  width: 100%;
+  /* background-color: sandybrown; */
 }
 
-.sixth_6>.color>span:nth-child(1){
-    background-color: #A2BCAC;
+.w-designConcept .w-Image{
+    width: 100%;
+    height: 300px;
+    /* background-color: slateblue; */
+    border-radius: 3px;
+    position: absolute;
+    bottom: 0px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-.sixth_6>.color>span:nth-child(2){
- 
-    background-color: #CE9A66;
+.w-productIntro {
+    width: 100%;
+    /* height:400px; */
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    /* background-color: slateblue; */
 }
-.sixth_6>.color>span:nth-child(3){
-    background-color: #B1808A;
+.w-productIntro h2{
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
 }
-.sixth_6>.color>span:nth-child(4){
-    background-color: #3D3E73;
+.w-productIntro span{
+    display: block;
+    width: 100%;
+    align-self: center;
+    height: 0.5px;
+    background-color: rgb(42, 42, 42);
+    margin-bottom: 20px;
+}
+.w-productIntro .w-inforArea{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.w-productIntro .w-infor{
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    align-self: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+   
+}
+.w-productIntro .w-Image{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 0px;
+}
+.w-productIntro .w-infor .nth1{
+    width: 100%;
+    /* background-color: slateblue; */
+    margin-bottom: 30px;
+}
+.w-productIntro .w-infor .nth1 .w-Image{
+    width: 100%;
+    height: 500px;
+    /* background-color: slateblue; */
+    border-radius: 3px;
+}
+
+
+.w-productIntro .left .nth1 .w-Image{
+ background-image: url("../images/strucscrew/strucscrewIntroduction1.png");
+}
+.w-productIntro .w-infor .nth2{
+    width: 48%;
+    /* background-color: slateblue; */
+}
+.w-productIntro .w-infor .nth2 .w-Image{
+    width: 100%;
+    height: 200px;
+    /* background-color: slateblue; */
+    border-radius: 3px 3px 0px 0px;
+}
+.w-productIntro .left .nth2 .w-Image{
+    background-image: url("../images/strucscrew/strucscrewIntroduction2.png");
+    background-color: rgb(42, 42, 42);
+   }
+.w-productIntro .w-infor .nth3{
+    width: 48%;
+    /* background-color: slateblue; */
+    align-self: flex-end;
+}
+.w-productIntro .w-infor .nth3 .w-Image{
+    width: 100%;
+    height: 200px;
+    /* background-color: slateblue; */
+    border-radius: 3px 3px 0px 0px;
+}
+.w-productIntro .left .nth3 .w-Image{
+    background-image: url("../images/strucscrew/strucscrewIntroduction3.png");
+    background-color: rgb(42, 42, 42);
+   }
+
+.w-productIntro .w-infor .w-introgroup p{
+    text-align: center;
+    color: whitesmoke;
+    background-color: rgb(42, 42, 42);
+    padding-bottom: 15px;
+    border-radius: 0px 0px 3px 3px;
+}
+
+.slick-dots{
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -40px;
+}
+.w-finalModel{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+.w-finalModel h2{
+    width: 100%;
+    text-align: left;
+}
+.w-finalModel span{
+    width: 100%;
+    align-self: center;
+    height: 1px;
+    background-color: rgb(42, 42, 42);
+    margin-bottom: 20px;
+}
+.w-finalModel .w-Image{
+    width: 100%;
+    /* background-color: tomato; */
+    background-image: url("../images/strucscrew/finalModel.png");
+    height: 400px;
+    background-size: cover;
+    border-radius: 3px;
 }
 /* ////////////////////////////////////////////////////////////////main-mid end//////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////main-mid end//////////////////////////////////////////////////////////// */
@@ -557,8 +680,8 @@ main {
     right: 0px;
     width: calc(100vw / 7);
     height: 100vh;
-    z-index:3;
     /* background-color: salmon; */
+    z-index: -1;
     }
     .main-right > .main-decoration {
     position: absolute;
@@ -575,7 +698,6 @@ main {
     transition: all 1s ease 0s;
     transform: scaleY(1);
     }
-
     .main-right > .main-text {
     position: absolute;
     bottom:  calc(50% - 37.5px);
@@ -592,7 +714,7 @@ main {
     position: absolute;
     bottom: 0px;
     right: 0px;
-    z-index:4;
+    z-index: 3;
     }
 
 /* ////////////////////////////////////////////////////////////////main-right end//////////////////////////////////////////////////////////// */
@@ -602,7 +724,7 @@ main {
     /* background-color: rosybrown; */
     display: none;
     position: fixed;
-    right: 35px;
+    right: 35pX;
     bottom:40px;
     width:50px;
     height: 50px;
@@ -703,11 +825,9 @@ main {
 .top-btn:hover p{
     top: -15px;
 }
-
 /* ////////////////////////////////////////////////////////////////top-btn end//////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////top-btn end//////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////top-btn end//////////////////////////////////////////////////////////// */
-
 
 footer{
     width: 100%;
@@ -720,10 +840,13 @@ footer{
     box-sizing: border-box;
     padding: 30px;
     position: relative;
+    z-index: 1;
 
 }
 footer h1{
-   
+    /* text-align: center; */
+    /* position: absolute;
+    top: -10px; */
     align-self: center;
     line-height: 20px;
     font-family: 'Roboto', sans-serif;
@@ -775,7 +898,7 @@ footer h1{
     font-weight:500;
     letter-spacing: 0.1em;
     position: relative;
-   
+    /* transition: 0.2s; */
 }
 .workLink:hover li a{
     color: rgb(42, 42, 42);

@@ -114,13 +114,14 @@
             if ($(".menu-content").hasClass("show")) {
                 $(".menu-content").removeClass("show")
                 $(".main-right>.block").hide()
-                    $(".main-right>.main-text").css({ "bottom": "10%", "color": "#3E3A39" })
+                $(".main-right>.main-text").text("SENSIBLE")
+                $(".main-right>.main-text").css({ "bottom": "10%","transform":" translateY(0%)", "color": "#3E3A39" })
             }
             else {
                 $(".menu-content").addClass("show")
                 $(".main-right>.main-text").text("MENU")
-                    $(".main-right>.block").show()
-                    $(".main-right>.main-text").css({ "bottom": "35%", "color": "#DCDCDC" })
+                $(".main-right>.block").show()
+                $(".main-right>.main-text").css({ "bottom": "calc(50% - 37.5px)","transform":" translateY(50%)", "color": "#DCDCDC" })    
             }
         }
     )

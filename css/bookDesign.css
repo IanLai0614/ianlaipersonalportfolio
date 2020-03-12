@@ -272,6 +272,8 @@ main {
         display: inline-block;
         color: rgb(62, 58, 57);
         font-size: 75px;
+        line-height: 75px;
+        width: 75px;
         font-family: 'Roboto', sans-serif;
         font-style: italic;
         writing-mode: vertical-lr;
@@ -290,7 +292,10 @@ main {
     }
     .main-left > .main-text {
     position: absolute;
-    top: 20vh;
+    /* width: 1000px; */
+    top: calc(50% + 37.5px);
+    transform: translateY(-50%);
+    white-space: nowrap;
     left: 25px;
     font-size: 75px;
     line-height: 75px;
@@ -531,10 +536,13 @@ main {
     }
     .main-right > .main-text {
     position: absolute;
-    bottom: 20%;
+    bottom:  calc(50% - 37.5px);
+    transform: translateY(50%);
+    white-space: nowrap;
     right: 25px;
     line-height: 75px;
     font-size: 75px;
+
     }
     .main-right > .block {
     display: none;
