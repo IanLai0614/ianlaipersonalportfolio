@@ -589,7 +589,7 @@ margin-bottom: 10px;
 .w-productIntro .w-infor .nth1{
     width: 100%;
     /* background-color: slateblue; */
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .w-productIntro .w-infor .nth1 .w-Image{
     width: 100%;
@@ -598,12 +598,11 @@ margin-bottom: 10px;
     border-radius: 3px;
 }
 
-
 .w-productIntro .left .nth1 .w-Image{
  background-image: url("../images/strucscrew/strucscrewIntroduction1.png");
 }
 .w-productIntro .w-infor .nth2{
-    width: 48%;
+    width: calc(50% - 10px);
     /* background-color: slateblue; */
 }
 .w-productIntro .w-infor .nth2 .w-Image{
@@ -617,7 +616,7 @@ margin-bottom: 10px;
     background-color: rgb(42, 42, 42);
    }
 .w-productIntro .w-infor .nth3{
-    width: 48%;
+    width: calc(50% - 10px);
     /* background-color: slateblue; */
     align-self: flex-end;
 }
@@ -640,6 +639,58 @@ margin-bottom: 10px;
     border-radius: 0px 0px 3px 3px;
 }
 
+.w-modelImage{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 80px;
+}
+.w-modelImage span{
+    display: block;
+    width: 100%;
+    align-self: center;
+    height: 1px;
+    background-color: rgb(42, 42, 42);
+    margin-bottom: 20px;
+}
+.w-modelImage .imageArea{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.w-modelImage .imageArea .w-Image:nth-child(1){
+width: calc(60% - 10px);
+height: 300px;
+background-image: url("../images/strucscrew/model1.png");
+border-radius: 3px;
+}
+
+.w-modelImage .imageArea .w-Image:nth-child(1){
+    width: calc(60% - 10px);
+    height: 300px;
+    background-image: url("../images/strucscrew/model1.png");
+    border-radius: 3px;
+    }
+
+.w-modelImage .imageArea .w-Image:nth-child(2){
+        width: calc(40% - 10px);
+        height: 300px;
+        background-image: url("../images/strucscrew/model2.png");
+        border-radius: 3px;
+}
+.w-modelImage .imageArea .w-Image:nth-child(3){
+    width: calc(70% - 10px);
+    height: 300px;
+    background-image: url("../images/strucscrew/model3.png");
+    border-radius: 3px;
+}
+.w-modelImage .imageArea .w-Image:nth-child(4){
+    width: calc(30% - 10px);
+    height: 300px;
+    background-image: url("../images/strucscrew/model4.png");
+    border-radius: 3px;
+}
 .slick-dots{
     left: 50%;
     transform: translateX(-50%);
