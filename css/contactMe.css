@@ -239,13 +239,13 @@ border-color: rgb(220, 220, 220); */
     height: 24px; */
     transform: scale(1.3);
 }
-#contact .ig-link{
-    background-image: url("../images/index/index-ig.svg");
+#contact .mail-link{
+    background-image: url("../images/index/index-mail.svg");
     background-repeat: no-repeat;
     background-size: 100%;
 }
-#contact .ig-link:hover{
-    background-image: url("../images/index/index-igHover.svg");
+#contact .mail-link:hover{
+    background-image: url("../images/index/index-mailHover.svg");
     /* width: 24px;
     height: 24px; */
     transform: scale(1.3);
@@ -453,6 +453,7 @@ main {
     font-size: 16px;
     font-weight: 300;
     margin-top: 10px;
+    text-decoration: none;
 
     }
     .contact-text{
@@ -465,6 +466,14 @@ main {
     }
     .contact-content .contact-text p:last-child{
         margin-bottom: 20px;
+
+    }
+    .contact-content .contact-text p:last-child a{
+        text-decoration: none;
+        color: #DCDCDC;
+    }
+    .contact-content .contact-text p:last-child:hover a{
+        color: #16E9D8;
     }
 /* ////////////////////////////////////////////////////////////////main-mid end//////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////main-mid end//////////////////////////////////////////////////////////// */

@@ -240,15 +240,14 @@ border-color: rgb(220, 220, 220); */
     height: 24px; */
     transform: scale(1.3);
 }
-#contact .ig-link{
-    background-image: url("../images/index/index-ig.svg");
+
+#contact .mail-link{
+    background-image: url("../images/index/index-mail.svg");
     background-repeat: no-repeat;
     background-size: 100%;
 }
-#contact .ig-link:hover{
-    background-image: url("../images/index/index-igHover.svg");
-    /* width: 24px;
-    height: 24px; */
+#contact .mail-link:hover{
+    background-image: url("../images/index/index-mailHover.svg");
     transform: scale(1.3);
 }
 
