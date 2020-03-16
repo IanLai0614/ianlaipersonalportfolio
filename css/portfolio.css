@@ -318,8 +318,10 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-self: center;
     margin: auto;
     width: calc(500vw / 7);
+    max-width: 1124px;
     height: 100vh;
     /* background-color: royalblue; */
     }
@@ -448,16 +450,15 @@ main {
    box-shadow: rgba(17, 17, 17,0.6) 1px 1px 5px 2px;
    transition: 0.5s;
 }
-.work-area .works-category .w-img .w-image{
-   
+.work-area .works-category .w-img .w-image{ 
     height: 250px;
     width: 100%;
     border-radius: 5px;
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center;
-   box-shadow: rgba(17, 17, 17,0.6) 1px 1px 5px 2px;
-   transition: 0.5s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: rgba(17, 17, 17,0.6) 1px 1px 5px 2px;
+    transition: 0.5s;
 }
 .work-area .works-category .w-img .w-image a{
     letter-spacing: 2px;
@@ -485,25 +486,25 @@ main {
     transform: scale(1.1);
 }
 .work-area .works-category:nth-child(1) .w-img .w-image{
-background-image: url("../images/carousel/carousel-logoDesign.png");
+background-image: url("../images/portfolio/logoDesign.png");
 }
 .work-area .works-category:nth-child(2) .w-img .w-image{
-    background-image: url("../images/carousel/carousel-treata.png");
+    background-image: url("../images/portfolio/treata.png");
 }
 .work-area .works-category:nth-child(3) .w-img .w-image{
-    background-image: url("../images/carousel/carousel-dressDesign.png");
+    background-image: url("../images/portfolio/dressDesign.png");
 }
 .work-area .works-category:nth-child(4) .w-img .w-image{
-    background-image: url("../images/carousel/carousel-oknife.png");
+    background-image: url("../images/portfolio/oknife.png");
 }
 .work-area .works-category:nth-child(5) .w-img .w-image{
-    background-image: url("../images/carousel/carousel-posterDesign.png");
+    background-image: url("../images/portfolio/posterDesign.png");
  }
 .work-area .works-category:nth-child(6) .w-img .w-image{
-    background-image: url("../images/carousel/carousel-strucscrew.png");
+    background-image: url("../images/portfolio/strucscrew.png");
 }
 .work-area .works-category:nth-child(7) .w-img .w-image{
-    background-image: url("../images/carousel/carousel-bookDesign.png");
+    background-image: url("../images/portfolio/bookDesign.png");
 }
 /* ////////////////////////////////////////////////////////////////main-mid end//////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////main-mid end//////////////////////////////////////////////////////////// */

@@ -75,7 +75,19 @@
                         <polygon class="st0" points="358.7,0.5 341,89.1 357.4,89.1 375.2,0.5 	" />
                     </g>
                 </svg>
-
+                 
+                <div class="hoverMe animated fadeIn delay-2s">
+                
+                        <p>H</p>
+                        <p>O</p>
+                        <p>V</p>
+                        <p>E</p>
+                        <p>R</p>
+                        <p>-</p>
+                        <p>M</p>
+                        <p>E</p>
+                  
+                </div>
 
             </div>
             <div class="main-works">
@@ -120,13 +132,14 @@
     <script>
         'use strict'
 
-        $(".main-name").hover(
+        $(".main-name svg").hover(
             function () {
                 $(".main-left>.main-decoration>img").css({ "bottom": "-75px", "transform": "scaleY(1.5)" })
                 $(".main-right>.main-decoration>img").css({ "top": "-100px", "transform": "scaleY(1.5)" })
                 $(".main-text").css({ "color": "#DCDCDC" })
                 $("#name-path .st0").css({ "animation": "name-animate2 1s ease-out forwards" })
                 $(".main-name img").hide()
+                $(".main-name .hoverMe").fadeOut()
                 // $(".main-name img").css({"animation":"name-animate3 1s ease-out forwards"})
 
             }, function () {
@@ -136,6 +149,7 @@
                 $("#name-path .st0").css({ "animation": "none" })
                 $(".main-name img").css({ "animation": "none" })
                 $(".main-name img").show()
+                $(".main-name .hoverMe").hide()
             }
         )
 

@@ -399,6 +399,47 @@ animation: name-animate 2s ease-out backwards;
         opacity: 1;
     }
 }
+
+.hoverMe{
+    position: absolute; 
+    width: 188px;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #16E9D8;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    
+}
+
+.hoverMe p{
+    animation: flicker 2s infinite 2.5s ease-out;
+}
+
+@keyframes flicker {
+  0%{
+      opacity: 1;
+  }
+  50%{
+      opacity: 0.5;
+  }
+100%{
+    opacity: 1;
+}
+}
+.hoverMe span{
+    width: 5px;
+    height: 5px;
+    transform: rotate(45deg);
+    border-top: 1px solid whitesmoke;
+    border-left: 1px solid whitesmoke;
+    align-self: center;
+}
+
 /* ////////////////////////////////////////////////////////////////main-name
 end//////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////main-name
