@@ -382,6 +382,10 @@ main {
 }
 .myPicture-text p:first-child{
     margin-left: 20px;
+    animation-delay: 1s;
+}
+.myPicture-text p:last-child{
+    animation-delay: 1.5s;
 }
 .myPicture-text p span{
     display: block;

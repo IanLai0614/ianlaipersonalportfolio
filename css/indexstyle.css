@@ -20,6 +20,11 @@ height: 75px;
 z-index: 999;
 margin: auto;
 }
+@media screen and (max-width:768px){
+
+}
+
+
 menu {
 float: left;
 display: block;
@@ -268,6 +273,7 @@ flex-direction: row;
 justify-content: space-between;
 margin: auto;
 }
+
 .main-left {
 flex-grow: 1;
 height: 100vh;
@@ -298,6 +304,11 @@ transform: scaleY(1);
 animation: fadeInBottom 2s ease-in-out;
 }
 
+@media screen and (max-width:768px){
+    .main-left{
+        display: none;
+    }
+}
 /* ////////////////////////////////////////////////////////////////main-left
 end//////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////main-left
@@ -310,6 +321,12 @@ flex-grow: 5;
 height: 100vh;
 }
 
+@media screen and (max-width:768px){
+    .main-mid {
+        width: 100vh;
+        height: 100vh;
+        }
+}
 .main-text {
 display: inline-block;
 color: rgb(62, 58, 57);
@@ -457,6 +474,9 @@ position: relative;
 width: 100%;
 height: 60%;
 }
+
+
+
 .main-works-bgdecoration {
 position: absolute;
 align-self: center;
@@ -472,7 +492,6 @@ border-radius: 10px;
 border-width: 2px;
 border-style: solid;
 border-color: rgb(220, 220, 220);
-border-image: initial;
 }
 .main-carouselArea {
 align-self: center;
@@ -493,6 +512,26 @@ cursor: pointer;
 .main-carouselArea .left:hover{
     background-image: url("../images/index/index-leftArrowHover.svg")
 }
+
+@media screen and (max-width:768px){
+    .main-works {
+        width:calc(500% / 7);
+        height: 40%;
+        }
+
+        .main-works-bgdecoration {
+            height: 40vh;
+            max-width: 460px;
+            min-width: 180px;
+            max-height: 307px;
+            min-height:100px ;
+        }
+
+        .main-carouselArea .left {
+            width:23px;
+            height: 40px;
+            }
+}
 /* ///////////////////////////main-works-carousel /////////////////////// */
 /* ///////////////////////////main-works-carousel /////////////////////// */
 .main-works-carousel {
@@ -509,6 +548,11 @@ z-index: 2;
 box-sizing: border-box;
 border-radius: 10px;
 }
+
+@media screen and (max-width:768px){
+
+}
+
 .main-works-carousel a{
     display: block;
     width: 100%;
@@ -673,6 +717,12 @@ background-repeat: no-repeat;
 position: relative;
 flex-grow: 1;
 height: 100vh;
+}
+
+@media screen and (max-width:768px){
+    .main-right {
+        display: none;
+        }
 }
 .main-right > .main-decoration {
 position: absolute;
