@@ -20,11 +20,6 @@ height: 75px;
 z-index: 999;
 margin: auto;
 }
-@media screen and (max-width:768px){
-
-}
-
-
 menu {
 float: left;
 display: block;
@@ -93,12 +88,31 @@ position: absolute;
 right: 5vw;
 text-decoration: none;
 transition: all 1s ease 0s;
+white-space: nowrap;
 }
 .menu-theme:hover a{
 text-align: right;
 right: 1vw;
 
 }
+
+@media screen and (max-width:768px){
+    .menu-theme a {
+        width: 30vw;
+        line-height: 50px;
+        font-size: 50px;
+    }
+
+    .menu-contentArea {
+        left: 30%;
+    }
+
+
+    
+}
+
+
+
 .menu-btn {
 width: 40px;
 height: 30px;
@@ -159,7 +173,11 @@ transition: bottom 0.2s ease 0s, transform 0.2s ease 0.4s;
 position: absolute;
 left: -140px;
 }
-
+@media screen and (max-width:768px){
+    .show {
+        left: -35px;
+        }
+}
 /* ////////////////////////////////////////////////////////////////menu
 end//////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////menu
@@ -304,11 +322,33 @@ transform: scaleY(1);
 animation: fadeInBottom 2s ease-in-out;
 }
 
-@media screen and (max-width:768px){
-    .main-left{
-        display: none;
+@media screen and (max-width:420px){
+    .main-left > .main-text {
+        position: absolute;
+        top: 20vh;
+        left: 0px;
+        font-size: 40px;
+        line-height: 40px;
+        
+    }
+    .main-left > .main-decoration {
+            position: absolute;
+            bottom: 0px;
+            left: 5px;
+            display: block;
+            width: 39px;
+            height: 115px;
+            overflow: hidden;
+    }
+    .main-left > .main-decoration > img {
+            position: absolute;
+            bottom: -75px;
+            transition: all 1s ease 0s;
+            transform: scaleY(1);
+            animation: fadeInBottom 2s ease-in-out;
     }
 }
+
 /* ////////////////////////////////////////////////////////////////main-left
 end//////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////main-left
@@ -321,12 +361,12 @@ flex-grow: 5;
 height: 100vh;
 }
 
-@media screen and (max-width:768px){
+/* @media screen and (max-width:420px){
     .main-mid {
-        width: 100vh;
+        flex-grow: 5;
         height: 100vh;
         }
-}
+} */
 .main-text {
 display: inline-block;
 color: rgb(62, 58, 57);
@@ -448,14 +488,6 @@ animation: name-animate 2s ease-out backwards;
     opacity: 1;
 }
 }
-.hoverMe span{
-    width: 5px;
-    height: 5px;
-    transform: rotate(45deg);
-    border-top: 1px solid whitesmoke;
-    border-left: 1px solid whitesmoke;
-    align-self: center;
-}
 
 /* ////////////////////////////////////////////////////////////////main-name
 end//////////////////////////////////////////////////////////// */
@@ -480,12 +512,12 @@ height: 60%;
 .main-works-bgdecoration {
 position: absolute;
 align-self: center;
-width: 60vw;
-height: 60vh;
-max-width: 1174px;
-min-width: 650px;
-max-height: 650px;
-min-height: 350px;
+width: calc(54vw + 50px);
+height: calc(27vw + 50px);
+max-width: 1086px;
+min-width: 466px;
+max-height: 568px;
+min-height: 257.5px;
 box-sizing: border-box;
 clear: both;
 border-radius: 10px;
@@ -493,6 +525,7 @@ border-width: 2px;
 border-style: solid;
 border-color: rgb(220, 220, 220);
 }
+
 .main-carouselArea {
 align-self: center;
 width: 85%;
@@ -513,23 +546,26 @@ cursor: pointer;
     background-image: url("../images/index/index-leftArrowHover.svg")
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width:420px){
     .main-works {
         width:calc(500% / 7);
-        height: 40%;
+        height: 60%;
         }
 
         .main-works-bgdecoration {
-            height: 40vh;
-            max-width: 460px;
-            min-width: 180px;
-            max-height: 307px;
-            min-height:100px ;
+            width: calc(60vw + 10px);
+            height: calc(120vw + 10px);
+            max-width: 300px;
+            min-width: 190px;
+            max-height: 514px;
+            min-height:370px ;
+            border-radius: 6px;
+            border-width: 1px;
         }
 
         .main-carouselArea .left {
-            width:23px;
-            height: 40px;
+            width:18px;
+            height: 32px;
             }
 }
 /* ///////////////////////////main-works-carousel /////////////////////// */
@@ -538,19 +574,15 @@ cursor: pointer;
 overflow: hidden;
 /* background-color: blueviolet; */
 align-self: center;
-width: calc(60vw - 50px);
-height: calc(60vh - 50px);
-max-width: 1024px;
-min-width: 600px;
-max-height: 450px;
-min-height: 300px;
+width: 54vw;
+height: 27vw;
+max-width: 1036px;
+min-width: 415px;
+max-height: 518px;
+min-height: 207.5px;
 z-index: 2;
 box-sizing: border-box;
-border-radius: 10px;
-}
-
-@media screen and (max-width:768px){
-
+border-radius: 6px;
 }
 
 .main-works-carousel a{
@@ -565,12 +597,12 @@ border-radius: 10px;
 }
 
 .main-works-carousel .logo-design{
-    width: calc(60vw - 50px);
-    height: calc(60vh - 50px);
-    min-width: 600px;
-    max-height: 600px;
-    min-height: 300px;
-    background-image: url("../images/carousel/carousel-logoDesign.png");
+
+    height: 27vw;
+    min-width: 415px;
+    max-height: 518px;
+    min-height: 207.5px;
+    background-image: url("../images/carousel/carousel-logoDesign.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -582,12 +614,11 @@ border-radius: 10px;
 }
 
 .main-works-carousel .treata{
-    width: calc(60vw - 50px);
-    height: calc(60vh - 50px);
-    min-width: 600px;
-    max-height: 600px;
-    min-height: 300px;
-    background-image: url("../images/carousel/carousel-treata.png");
+    height: 27vw;
+    min-width: 415px;
+    max-height: 518px;
+    min-height: 207.5px;
+    background-image: url("../images/carousel/carousel-treata.jpg");
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -597,12 +628,11 @@ border-radius: 10px;
     transform: scale(1.2);
 }
 .main-works-carousel .dress-design{
-    width: calc(60vw - 50px);
-    height: calc(60vh - 50px);
-    min-width: 600px;
-    max-height: 600px;
-    min-height: 300px;
-    background-image: url("../images/carousel/carousel-dressDesign.png");
+    height: 27vw;
+    min-width: 415px;
+    max-height: 518px;
+    min-height: 207.5px;
+    background-image: url("../images/carousel/carousel-dressDesign.jpg");
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -612,12 +642,11 @@ border-radius: 10px;
     transform: scale(1.2);
 }
 .main-works-carousel .oknife{
-    width: calc(60vw - 50px);
-    height: calc(60vh - 50px);
-    min-width: 600px;
-    max-height: 600px;
-    min-height: 300px;
-    background-image: url("../images/carousel/carousel-oknife.png");
+    height: 27vw;
+    min-width: 415px;
+    max-height: 518px;
+    min-height: 207.5px;
+    background-image: url("../images/carousel/carousel-oknife.jpg");
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -628,12 +657,11 @@ border-radius: 10px;
 }
 
 .main-works-carousel .poster-design{
-    width: calc(60vw - 50px);
-    height: calc(60vh - 50px);
-    min-width: 600px;
-    max-height: 600px;
-    min-height: 300px;
-    background-image: url("../images/carousel/carousel-posterDesign.png");
+    height: 27vw;
+    min-width: 415px;
+    max-height: 518px;
+    min-height: 207.5px;
+    background-image: url("../images/carousel/carousel-posterDesign.jpg");
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -644,12 +672,11 @@ border-radius: 10px;
 }
 
 .main-works-carousel .strucscrew{
-    width: calc(60vw - 50px);
-    height: calc(60vh - 50px);
-    min-width: 600px;
-    max-height: 600px;
-    min-height: 300px;
-    background-image: url("../images/carousel/carousel-strucscrew.png");
+    height: 27vw;
+    min-width: 415px;
+    max-height: 518px;
+    min-height: 207.5px;
+    background-image: url("../images/carousel/carousel-strucscrew.jpg");
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -661,13 +688,11 @@ border-radius: 10px;
 
 
 .main-works-carousel .book-design{
-    width: calc(60vw - 50px);
-    height: calc(60vh - 50px);
-    max-width: 1124px;
-    min-width: 600px;
-    max-height: 600px;
-    min-height: 300px;
-    background-image: url("../images/carousel/carousel-bookDesign.png");
+    height: 27vw;
+    min-width: 415px;
+    max-height: 518px;
+    min-height: 207.5px;
+    background-image: url("../images/carousel/carousel-bookDesign.jpg");
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -676,8 +701,10 @@ border-radius: 10px;
 .main-works-carousel .book-design:hover{
     transform: scale(1.2);
 }
+
 /* ///////////////////////////main-works-carousel end /////////////////////// */
 /* ///////////////////////////main-works-carousel end/////////////////////// */
+
 
 .main-carouselArea .right {
     width:36px;
@@ -708,6 +735,95 @@ background-size: cover;
 background-repeat: no-repeat;
 }
 
+@media screen and (max-width:420px){
+    .main-works-carousel {
+        width: calc(60vw);
+        height: calc(120vw);
+        max-width: 300px;
+        min-width: 190px;
+        max-height: 514px;
+        min-height:370px ;
+        border-radius: 4px;
+        }
+    .main-works-carousel .logo-design{
+
+        height: calc(120vw);
+        max-width: 300px;
+        min-width: 190px;
+        max-height: 514px;
+        min-height:370px ;
+
+    }
+    
+    .main-works-carousel .treata{
+        height: calc(120vw);
+        max-width: 300px;
+        min-width: 190px;
+        max-height: 514px;
+        min-height:370px ;
+    }
+
+    .main-works-carousel .dress-design{
+        height: calc(120vw);
+        max-width: 300px;
+        min-width: 190px;
+        max-height: 514px;
+        min-height:370px ;
+    }
+    
+    .main-works-carousel .oknife{
+        height: calc(120vw);
+        max-width: 300px;
+        min-width: 190px;
+        max-height: 514px;
+        min-height:370px ;
+    }
+    
+    .main-works-carousel .poster-design{
+        height: calc(120vw);
+        max-width: 300px;
+        min-width: 190px;
+        max-height: 514px;
+        min-height:370px ;
+    }
+    .main-works-carousel .strucscrew{
+        height: calc(120vw);
+        max-width: 300px;
+        min-width: 190px;
+        max-height: 514px;
+        min-height:370px ;
+    }
+    
+    
+    .main-works-carousel .book-design{
+        height: calc(120vw);
+        max-width: 300px;
+        min-width: 190px;
+        max-height: 514px;
+        min-height:370px ;
+    }
+
+    .main-carouselArea .right {
+        width:18px;
+        height: 32px;
+    }
+
+    .main-works-cover {
+        /* display: none; */
+
+        width: 99px;
+        height: 55px;
+        z-index: 3;
+        border-radius: 6px;
+        }
+        
+}
+
+/* /////////////////////////////////////手機板結束///////////////////////////////// */
+/* /////////////////////////////////////手機板結束///////////////////////////////// */
+
+
+
 /*////////////////////////////////////////////////////////////////main-mid////////////////////////////////////////////////////////////*/
 /*////////////////////////////////////////////////////////////////main-mid///////////////////////////////////////////////////////////*/
 /*////////////////////////////////////////////////////////////////main-mid////////////////////////////////////////////////////////////
@@ -720,9 +836,7 @@ height: 100vh;
 }
 
 @media screen and (max-width:768px){
-    .main-right {
-        display: none;
-        }
+    
 }
 .main-right > .main-decoration {
 position: absolute;
