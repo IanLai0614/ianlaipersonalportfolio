@@ -329,6 +329,7 @@ animation: fadeInBottom 2s ease-in-out;
         left: 0px;
         font-size: 40px;
         line-height: 40px;
+        color: whitesmoke;
         
     }
     .main-left > .main-decoration {
@@ -361,12 +362,6 @@ flex-grow: 5;
 height: 100vh;
 }
 
-/* @media screen and (max-width:420px){
-    .main-mid {
-        flex-grow: 5;
-        height: 100vh;
-        }
-} */
 .main-text {
 display: inline-block;
 color: rgb(62, 58, 57);
@@ -547,9 +542,33 @@ cursor: pointer;
 }
 
 @media screen and (max-width:420px){
+    .hoverMe{
+       display: none;
+        
+    }
+
+    .main-name {
+        display: block;
+        width: 141px;
+        height: 35px;
+        /* background-image: url(images/index/index-name.svg); */
+        background-size: 100%;
+        margin: 85px auto 0px;
+        background-repeat: no-repeat;
+        position: relative;
+        /* background-color:red; */
+        }
+        
+    .main-mid {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        }
     .main-works {
-        width:calc(500% / 7);
-        height: 60%;
+        width:100%;
+        height: 70%;
+        align-self: center;
+        margin-top: 10px;
         }
 
         .main-works-bgdecoration {
@@ -562,6 +581,11 @@ cursor: pointer;
             border-radius: 6px;
             border-width: 1px;
         }
+
+        .main-carouselArea {
+            width: 100%;
+            justify-content: space-between;
+            }
 
         .main-carouselArea .left {
             width:18px;
@@ -812,7 +836,7 @@ background-repeat: no-repeat;
         /* display: none; */
 
         width: 99px;
-        height: 55px;
+        height: 55 px;
         z-index: 3;
         border-radius: 6px;
         }
@@ -835,9 +859,6 @@ flex-grow: 1;
 height: 100vh;
 }
 
-@media screen and (max-width:768px){
-    
-}
 .main-right > .main-decoration {
 position: absolute;
 top: 0px;
@@ -907,6 +928,32 @@ z-index: 3;
     }
 }
 
+@media screen and (max-width:420px){
+    .main-right > .main-decoration {
+        right: 5px;
+        width: 34px;
+        height: 115px;
+        }
+        .main-right > .main-decoration > img {
+        top: -75px;
+        }
+        .main-right > .main-text {
+        bottom: 5%;
+        right: 5px;
+        line-height: 40px;
+        font-size: 40px;
+        color: whitesmoke;
+        }
+        .main-right > .block {
+        display: none;
+        width: 105px;
+        height: 70vh;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        z-index: 3;
+        }
+}
 /*
 ////////////////////////////////////////////////////////////////main-right////////////////////////////////////////////////////////////
 */
